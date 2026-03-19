@@ -3302,3 +3302,77 @@ h3 {
     filter: none;
   }
 }
+/* =========================================================
+   WHY IT WORKS FULL CARD FX
+   Original canvas effect adapted to the real card background
+========================================================= */
+
+.why-works-panel {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.why-works-panel .story-panel-copy,
+.why-works-panel .story-value-list {
+  position: relative;
+  z-index: 2;
+}
+
+.why-works-full-fx {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  overflow: hidden;
+  opacity: 0.82;
+}
+
+.why-works-full-fx::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* subtle blue atmosphere only */
+  background:
+    radial-gradient(
+      circle at 26% 34%,
+      rgba(56, 110, 200, 0.06) 0%,
+      rgba(24, 58, 140, 0.03) 22%,
+      rgba(0, 0, 0, 0) 46%
+    );
+}
+
+.why-works-full-fx::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  box-shadow:
+    inset 0 0 56px rgba(0, 0, 0, 0.08),
+    inset 0 0 18px rgba(0, 0, 0, 0.04);
+}
+
+#why-works-full-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .why-works-full-fx {
+    opacity: 0.72;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .why-works-full-fx {
+    opacity: 0.45;
+  }
+}
