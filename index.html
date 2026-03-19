@@ -1,0 +1,1070 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Bryce Huston builds premium websites, sharper systems, and founder-led digital experiences." />
+  <title>Bryce Huston | Home</title>
+  <link rel="stylesheet" href="homepage.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.162.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.162.0/examples/jsm/"
+        }
+      }
+    </script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="home-page">
+  <div class="home-shell">
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <main>
+      <header class="hero-nav-bar">
+        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+          <span class="brand-dot"></span>
+          <span class="brand-lockup">
+            <strong>Bryce</strong>
+            <span>Huston</span>
+          </span>
+        </a>
+        <nav class="hero-nav" aria-label="Primary">
+          <a class="active" href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="solutions.html">Solutions</a>
+          <a href="explore.html">Explore</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
+      </header>
+
+      <section class="hero-section hero-reference">
+        <div id="hero-stage" aria-hidden="true"></div>
+        <div class="hero-grid-overlay" aria-hidden="true"></div>
+        <div class="hero-circuit-lines" aria-hidden="true"></div>
+        <div class="hero-scan-line" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <p class="hero-kicker">Websites, systems, and digital execution.</p>
+          <h1>Beyond Horizons.</h1>
+          <p class="hero-support">
+            Built for founders and brands that want more signal and less noise.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="contact.html">Start A Project</a>
+            <a class="button button-secondary" href="projects.html">View Work</a>
+          </div>
+        </div>
+        <div class="hero-control-stack frame-trace-card" aria-label="Hero controls" data-frame-trace="scene-dock">
+          <span class="hero-control-label">Scene</span>
+          <button class="hero-control" id="btnNext" type="button">Shift</button>
+          <button class="hero-control active" id="swTrails" type="button" aria-pressed="true">Trails</button>
+          <button class="hero-control active" id="swGlow" type="button" aria-pressed="true">Glow</button>
+          <button class="hero-control hero-lock-toggle" id="swModeLock" type="button" aria-pressed="false">
+            <span class="hero-lock-icon" aria-hidden="true">
+              <span class="hero-lock-shackle"></span>
+              <span class="hero-lock-body"></span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <div class="hero-stats-divider" aria-hidden="true"></div>
+
+      <section class="stats-section premium-stats reveal reveal-soft" aria-label="Homepage stats" data-stats-section>
+        <div class="stats-heading-block">
+          <span class="accent-line" aria-hidden="true"></span>
+          <p class="eyebrow">Built On Trust</p>
+          <h2>Experience</h2>
+        </div>
+        <article class="stats-card reveal reveal-soft frame-trace-card" data-stat-card data-frame-trace="stats">
+          <span class="accent-line" aria-hidden="true"></span>
+          <div class="stats-value-wrap" aria-hidden="true">
+            <span class="stats-value" data-value="7" data-suffix="+">7+</span>
+          </div>
+          <p class="stats-label">Years Building Trust</p>
+        </article>
+        <article class="stats-card reveal reveal-soft frame-trace-card" data-delay="90" data-stat-card data-frame-trace="stats">
+          <span class="accent-line" aria-hidden="true"></span>
+          <div class="stats-value-wrap" aria-hidden="true">
+            <span class="stats-value" data-value="10" data-suffix="+">10+</span>
+          </div>
+          <p class="stats-label">Years in Tech</p>
+        </article>
+        <article class="stats-card reveal reveal-soft frame-trace-card" data-delay="180" data-stat-card data-frame-trace="stats">
+          <span class="accent-line" aria-hidden="true"></span>
+          <div class="stats-value-wrap" aria-hidden="true">
+            <span class="stats-value" data-value="20" data-suffix="+">20+</span>
+          </div>
+          <p class="stats-label">Satisfied Clients</p>
+        </article>
+      </section>
+
+      <section class="storytelling-shell" aria-label="Homepage story">
+        <div class="story-stage">
+          <article class="story-panel story-panel-intro panel frame-trace-card" data-frame-trace="story">
+            <div class="story-panel-copy">
+              <p class="eyebrow">What I Do</p>
+              <h2>I Build Digital Work That Lands Fast.</h2>
+              <span class="accent-line story-title-line" aria-hidden="true"></span>
+              <p class="story-support">
+                Stronger presence on the surface. Cleaner systems underneath.
+              </p>
+            </div>
+            <div class="story-panel-side">
+              <div class="story-note">
+                <span class="story-note-line"></span>
+                <p>For founders, operators, and brands that want fewer layers and a better final result.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="story-panel story-panel-value panel frame-trace-card" data-frame-trace="story">
+            <div class="story-panel-copy">
+              <p class="eyebrow">Why It Works</p>
+              <h2>Visual And Technical Decisions Align</h2>
+              <span class="accent-line story-title-line" aria-hidden="true"></span>
+              <p class="story-support">
+                That is what makes the work feel clear, composed, and finished.
+              </p>
+            </div>
+            <div class="story-value-list" aria-label="Core strengths">
+              <article class="story-value-item">
+                <p class="micro-label">Presence</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>It reads quickly and feels intentional.</h3>
+              </article>
+              <article class="story-value-item">
+                <p class="micro-label">Systems</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>Clean logic holds up underneath the polish.</h3>
+              </article>
+              <article class="story-value-item">
+                <p class="micro-label">Finish</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>Details stay controlled, not decorative.</h3>
+              </article>
+            </div>
+          </article>
+
+          <article class="story-panel story-panel-services panel frame-trace-card" data-frame-trace="story">
+            <div class="story-panel-copy">
+              <p class="eyebrow">Services</p>
+              <h2>What I actually build.</h2>
+              <span class="accent-line story-title-line" aria-hidden="true"></span>
+              <p class="story-support">
+                A tight set of capabilities with real depth behind them.
+              </p>
+            </div>
+            <div class="story-service-list" aria-label="Services">
+              <article class="story-service-item">
+                <p class="micro-label">Web Experiences</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>Websites and landing pages with stronger presence.</h3>
+              </article>
+              <article class="story-service-item">
+                <p class="micro-label">AI + Automation</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>Systems that remove drag behind the scenes.</h3>
+              </article>
+              <article class="story-service-item">
+                <p class="micro-label">Product Surfaces</p>
+                <span class="accent-line story-item-line" aria-hidden="true"></span>
+                <h3>Interfaces that feel cleaner, sharper, and more considered.</h3>
+              </article>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section work-section">
+        <div id="projects-particle-stage" aria-hidden="true"></div>
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Featured Projects</p>
+          <h2>Selected Work.</h2>
+          <p class="section-support">
+            A few projects that show the standard.
+          </p>
+        </div>
+        <div class="showcase-layout">
+          <article class="showcase-lead reveal reveal-left">
+            <div class="showcase-lead-media-shell frame-trace-card" data-frame-trace="lead">
+              <div class="showcase-number">01</div>
+              <div class="media-block showcase-media showcase-media-lead" data-label="Lead project"></div>
+            </div>
+            <div class="showcase-lead-copy-shell frame-trace-card" data-frame-trace="lead-copy">
+              <div class="showcase-lead-copy">
+                <span class="accent-line" aria-hidden="true"></span>
+                <p class="project-meta">Brand System • Website • Case Study</p>
+                <h3>The Lead Piece Should Hold The Screen.</h3>
+                <p>
+                  Strong signal. Clean hierarchy. Enough restraint to let the work do the proving.
+                </p>
+                <div class="showcase-links">
+                  <a class="text-link" href="projects.html">View Projects</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <div class="showcase-secondary-column">
+            <article class="showcase-secondary showcase-secondary-top reveal reveal-right frame-trace-card" data-delay="100" data-frame-trace="secondary">
+              <span class="accent-line" aria-hidden="true"></span>
+              <div class="showcase-number showcase-number-inline">02</div>
+              <p class="project-meta">Brand system • Website • Case study</p>
+              <h3>A Sharper Launch With More Pace.</h3>
+              <p>Built to feel immediate, clean, and hard to ignore.</p>
+              <div class="media-block showcase-media showcase-media-wide" data-label="Launch build"></div>
+            </article>
+
+            <article class="showcase-secondary showcase-secondary-bottom reveal reveal-right frame-trace-card" data-delay="180" data-frame-trace="secondary">
+              <div class="media-block showcase-media showcase-media-tall" data-label="Systems project"></div>
+              <div class="showcase-secondary-copy">
+                <span class="accent-line" aria-hidden="true"></span>
+                <div class="showcase-number">03</div>
+                <p class="project-meta">Automation • Product Surface</p>
+                <h3>Utility Work With The Same Finish.</h3>
+                <p>The back-end piece should still look considered from the front.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section pathway-section">
+        <div class="panel pathway-card reveal reveal-soft frame-trace-card" data-frame-trace="pathway">
+          <div>
+            <p class="eyebrow">HUSTON SOLUTIONS</p>
+            <span class="accent-line" aria-hidden="true"></span>
+            <h2>No Problem, <span class="pathway-title-break">Just Solutions.</span></h2>
+            <p>
+              The service side brings the offer, systems, and execution into one clearer place.
+            </p>
+          </div>
+          <div class="pathway-action">
+            <a class="button button-primary" href="solutions.html">Explore Solutions</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section explore-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Explore</p>
+          <h2>Outside the client work.</h2>
+          <p class="section-support">
+            Motion, travel, and perspective in a quieter register.
+          </p>
+        </div>
+        <div class="explore-grid">
+          <article class="panel explore-card reveal reveal-cinematic frame-trace-card" data-frame-trace="explore">
+            <div class="media-block media-tall" data-label="Explore photo placeholder"></div>
+            <div class="project-body">
+              <span class="accent-line" aria-hidden="true"></span>
+              <p class="project-meta">Travel • Stillness</p>
+              <h3>Editorial moments with atmosphere, not filler.</h3>
+            </div>
+          </article>
+          <article class="panel explore-card reveal reveal-cinematic frame-trace-card" data-delay="90" data-frame-trace="explore">
+            <div class="media-block media-wide" data-label="Explore video placeholder"></div>
+            <div class="project-body">
+              <span class="accent-line" aria-hidden="true"></span>
+              <p class="project-meta">Motion • Adventure</p>
+              <h3>Short-form movement that keeps the page feeling alive.</h3>
+            </div>
+          </article>
+          <article class="panel explore-card reveal reveal-cinematic frame-trace-card" data-delay="180" data-frame-trace="explore">
+            <div class="media-block media-tall" data-label="Explore photo placeholder"></div>
+            <div class="project-body">
+              <span class="accent-line" aria-hidden="true"></span>
+              <p class="project-meta">Depth • Behind the scenes</p>
+              <h3>Real life that gives the brand more dimension.</h3>
+            </div>
+          </article>
+        </div>
+        <div class="section-action-center reveal reveal-soft">
+          <a class="button button-secondary" href="explore.html">Explore More</a>
+        </div>
+      </section>
+
+      <section class="content-section faq-section bottom-atmosphere-section">
+        <div class="section-atmosphere section-atmosphere-faq" aria-hidden="true">
+          <span class="section-trail section-trail-one"></span>
+          <span class="section-trail section-trail-two"></span>
+          <span class="section-glow section-glow-one"></span>
+        </div>
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">FAQ</p>
+          <h2>Questions.</h2>
+          <p class="section-support">
+            Short answers.
+          </p>
+        </div>
+        <div class="faq-list">
+          <details class="panel faq-card reveal reveal-soft">
+            <summary>Are the reviews final yet?</summary>
+            <div class="faq-answer-shell frame-trace-card" data-frame-trace="faq-answer">
+              <p>No. The current review strip is placeholder presentation only. Real Google review data will replace it
+                later.</p>
+            </div>
+          </details>
+          <details class="panel faq-card reveal reveal-soft" data-delay="90">
+            <summary>Why is the hero closer to the uploaded reference now?</summary>
+            <div class="faq-answer-shell frame-trace-card" data-frame-trace="faq-answer">
+              <p>Because that file is now the primary visual reference for atmosphere, glow, depth, and overall hero
+                energy.</p>
+            </div>
+          </details>
+          <details class="panel faq-card reveal reveal-soft" data-delay="180">
+            <summary>Can real content drop in later without changing the layout?</summary>
+            <div class="faq-answer-shell frame-trace-card" data-frame-trace="faq-answer">
+              <p>Yes. Projects, reviews, media, and final copy can replace placeholders without changing the system.</p>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="content-section final-cta-section bottom-atmosphere-section">
+        <div class="section-atmosphere section-atmosphere-cta" aria-hidden="true">
+          <span class="section-trail section-trail-three"></span>
+          <span class="section-trail section-trail-four"></span>
+          <span class="section-glow section-glow-two"></span>
+        </div>
+        <div class="panel final-cta-card reveal reveal-soft frame-trace-card" data-frame-trace="cta">
+          <div class="cta-particle-field" aria-hidden="true">
+            <canvas class="cta-particle-canvas"></canvas>
+            <span class="cta-orbit cta-orbit-one"></span>
+            <span class="cta-orbit cta-orbit-two"></span>
+            <span class="cta-dust"></span>
+            <span class="cta-core-glow"></span>
+          </div>
+          <span class="accent-line accent-line-center" aria-hidden="true"></span>
+          <p class="eyebrow">Start A Project</p>
+          <h2>If the standard matters, let’s talk.</h2>
+          <p>
+            Websites, systems, and digital work with stronger clarity from the start.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="contact.html">Start A Project</a>
+            <a class="button button-secondary" href="projects.html">View Work</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+            <span class="brand-lockup footer-lockup">
+              <strong>Bryce</strong>
+              <span>Huston</span>
+            </span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="footer-note">&copy; HUSTON SOLUTIONS</p>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script type="module">
+    import * as THREE from "three";
+    import { EffectComposer } from "three/addons/postprocessing/EffectComposer.js";
+    import { RenderPass } from "three/addons/postprocessing/RenderPass.js";
+    import { UnrealBloomPass } from "three/addons/postprocessing/UnrealBloomPass.js";
+
+    const stage = document.getElementById("hero-stage");
+    const btnNext = document.getElementById("btnNext");
+    const swModeLock = document.getElementById("swModeLock");
+    const swTrails = document.getElementById("swTrails");
+    const swGlow = document.getElementById("swGlow");
+
+    if (stage && btnNext && swModeLock && swTrails && swGlow) {
+      const isMobile = matchMedia("(max-width: 720px)").matches;
+      const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      const NODE_COUNT = prefersReduced ? 6000 : (isMobile ? 8000 : 12000);
+      const TRAIL_COUNT = prefersReduced ? 1200 : (isMobile ? 1800 : 2600);
+      const MODE_NAMES = ["SPHERE", "VORTEX", "GRID"];
+      const AUTO_SWITCH_MS = 14000;
+
+      let modeIndex = 0;
+      let modeLocked = false;
+      let trailsOn = true;
+      let glowOn = true;
+
+      const CORE_Y = -40;
+
+      const scene = new THREE.Scene();
+      scene.fog = new THREE.FogExp2(0x000814, isMobile ? 0.012 : 0.008);
+
+      const camera = new THREE.PerspectiveCamera(70, 1, 0.1, 2500);
+      camera.position.set(0, 0, 170);
+
+      const renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance"
+      });
+
+      stage.appendChild(renderer.domElement);
+
+      const hemi = new THREE.HemisphereLight(0xffffff, 0x000000, 1);
+      scene.add(hemi);
+
+      let composer = null;
+      let bloomPass = null;
+
+      function sizeStage() {
+        const rect = stage.getBoundingClientRect();
+        const width = Math.max(1, Math.floor(rect.width));
+        const height = Math.max(1, Math.floor(rect.height));
+        renderer.setSize(width, height, false);
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+        if (composer) composer.setSize(width, height);
+      }
+
+      function setupComposer() {
+        composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        bloomPass = new UnrealBloomPass(
+          new THREE.Vector2(stage.clientWidth || window.innerWidth, stage.clientHeight || window.innerHeight),
+          isMobile ? 0.35 : 0.6,
+          0.55,
+          0.85
+        );
+        composer.addPass(bloomPass);
+      }
+
+      setupComposer();
+      sizeStage();
+
+      function rand(min, max) {
+        return min + Math.random() * (max - min);
+      }
+
+      function posSphere(i, n) {
+        const t = i / n;
+        const phi = Math.acos(1 - 2 * t);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+        const r = 74 + Math.sin(phi * 6) * 3;
+
+        return new THREE.Vector3(
+          r * Math.sin(phi) * Math.cos(theta),
+          r * Math.sin(phi) * Math.sin(theta),
+          r * Math.cos(phi)
+        );
+      }
+
+      function posVortex(i, n) {
+        const t = i / n;
+        const a = t * Math.PI * 2;
+        const twist = a * 8;
+        const major = 62;
+        const minor = 18 + Math.sin(a * 3) * 6;
+        return new THREE.Vector3(
+          (major + minor * Math.cos(twist)) * Math.cos(a),
+          minor * Math.sin(twist) + Math.sin(a * 4) * 6,
+          (major + minor * Math.cos(twist)) * Math.sin(a)
+        );
+      }
+
+      function posGrid(i, n) {
+        const side = Math.floor(Math.sqrt(n));
+        const x = (i % side) - side / 2;
+        const z = Math.floor(i / side) - side / 2;
+        const spacing = 2.1;
+        const wave = Math.sin(x * 0.35) * 5 + Math.cos(z * 0.35) * 5;
+        return new THREE.Vector3(x * spacing, wave, z * spacing);
+      }
+
+      const generators = [posSphere, posVortex, posGrid];
+      const geo = new THREE.BufferGeometry();
+      const positions = new Float32Array(NODE_COUNT * 3);
+      const colors = new Float32Array(NODE_COUNT * 3);
+      const sizes = new Float32Array(NODE_COUNT);
+
+      const baseColor = new THREE.Color("#00ffff");
+
+      function colorize(i) {
+        const hsl = {};
+        baseColor.getHSL(hsl);
+        const hue = (hsl.h + (i / NODE_COUNT) * 0.18) % 1;
+        const sat = Math.min(1, Math.max(0.55, hsl.s));
+        const lit = Math.min(0.7, Math.max(0.35, hsl.l + Math.sin(i * 0.01) * 0.05));
+        return new THREE.Color().setHSL(hue, sat, lit);
+      }
+
+      function fillPositions(genFn) {
+        for (let i = 0; i < NODE_COUNT; i++) {
+          const p = genFn(i, NODE_COUNT);
+          positions[i * 3 + 0] = p.x;
+          positions[i * 3 + 1] = p.y + CORE_Y;
+          positions[i * 3 + 2] = p.z;
+
+          const c = colorize(i);
+          colors[i * 3 + 0] = c.r;
+          colors[i * 3 + 1] = c.g;
+          colors[i * 3 + 2] = c.b;
+
+          sizes[i] = isMobile ? rand(1.1, 2.2) : rand(1.2, 2.8);
+        }
+      }
+
+      fillPositions(generators[0]);
+
+      geo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+      geo.setAttribute("color", new THREE.BufferAttribute(colors, 3));
+      geo.setAttribute("size", new THREE.BufferAttribute(sizes, 1));
+
+      function makePointTexture() {
+        const canvas = document.createElement("canvas");
+        canvas.width = 128;
+        canvas.height = 128;
+        const ctx = canvas.getContext("2d");
+        const grad = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+        grad.addColorStop(0, "rgba(255,255,255,1)");
+        grad.addColorStop(0.35, "rgba(255,255,255,0.65)");
+        grad.addColorStop(0.7, "rgba(255,255,255,0.15)");
+        grad.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 128, 128);
+        return new THREE.CanvasTexture(canvas);
+      }
+
+      const pointTex = makePointTexture();
+
+      const mat = new THREE.ShaderMaterial({
+        uniforms: {
+          time: { value: 0 },
+          tex: { value: pointTex },
+          glow: { value: 1.0 }
+        },
+        vertexShader: `
+            attribute vec3 color;
+            attribute float size;
+            varying vec3 vColor;
+            uniform float time;
+            uniform float glow;
+            void main() {
+              vColor = color * glow;
+              vec3 p = position;
+              p += normalize(position) * (sin(time * 1.7 + position.y * 0.04) * 0.35);
+              vec4 mv = modelViewMatrix * vec4(p, 1.0);
+              gl_PointSize = size * (320.0 / -mv.z);
+              gl_Position = projectionMatrix * mv;
+            }
+          `,
+        fragmentShader: `
+            uniform sampler2D tex;
+            varying vec3 vColor;
+            void main() {
+              vec4 t = texture2D(tex, gl_PointCoord);
+              gl_FragColor = vec4(vColor, t.a);
+            }
+          `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const core = new THREE.Points(geo, mat);
+      scene.add(core);
+
+      const tGeo = new THREE.BufferGeometry();
+      const tPos = new Float32Array(TRAIL_COUNT * 3);
+      const tCol = new Float32Array(TRAIL_COUNT * 3);
+      const tSize = new Float32Array(TRAIL_COUNT);
+
+      function initTrails() {
+        for (let i = 0; i < TRAIL_COUNT; i++) {
+          tPos[i * 3 + 0] = rand(-85, 85);
+          tPos[i * 3 + 1] = rand(-85, 85) + CORE_Y;
+          tPos[i * 3 + 2] = rand(-85, 85);
+
+          const c = colorize(Math.floor(rand(0, NODE_COUNT)));
+          tCol[i * 3 + 0] = c.r;
+          tCol[i * 3 + 1] = c.g;
+          tCol[i * 3 + 2] = c.b;
+
+          tSize[i] = rand(0.6, isMobile ? 1.4 : 2.0);
+        }
+      }
+
+      initTrails();
+      tGeo.setAttribute("position", new THREE.BufferAttribute(tPos, 3));
+      tGeo.setAttribute("color", new THREE.BufferAttribute(tCol, 3));
+      tGeo.setAttribute("size", new THREE.BufferAttribute(tSize, 1));
+
+      const tMat = new THREE.ShaderMaterial({
+        uniforms: {
+          time: { value: 0 },
+          tex: { value: pointTex }
+        },
+        vertexShader: `
+            attribute vec3 color;
+            attribute float size;
+            varying vec3 vColor;
+            uniform float time;
+            void main() {
+              vColor = color;
+              vec3 p = position;
+              p.y += sin(time * 2.2 + p.x * 0.05) * 0.25;
+              vec4 mv = modelViewMatrix * vec4(p, 1.0);
+              gl_PointSize = size * (300.0 / -mv.z);
+              gl_Position = projectionMatrix * mv;
+            }
+          `,
+        fragmentShader: `
+            uniform sampler2D tex;
+            varying vec3 vColor;
+            void main() {
+              vec4 t = texture2D(tex, gl_PointCoord);
+              gl_FragColor = vec4(vColor, t.a * 0.85);
+            }
+          `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const trails = new THREE.Points(tGeo, tMat);
+      scene.add(trails);
+
+      const targetRot = { x: 0, y: 0 };
+      const rot = { x: 0, y: 0 };
+      let autoSpinY = 0;
+
+      window.addEventListener("pointermove", (event) => {
+        const rect = stage.getBoundingClientRect();
+        const nx = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        const ny = ((event.clientY - rect.top) / rect.height) * 2 - 1;
+        targetRot.y = nx * 0.55;
+        targetRot.x = -ny * 0.35;
+      });
+
+      let morphing = false;
+      let morphT = 0;
+      let fromPos = new Float32Array(positions);
+      let toPos = new Float32Array(positions);
+      let nextAutoSwitchAt = performance.now() + AUTO_SWITCH_MS;
+
+      function startMorph(nextIndex) {
+        if (morphing) return;
+        modeIndex = nextIndex;
+        fromPos = new Float32Array(positions);
+        toPos = new Float32Array(positions.length);
+        const gen = generators[modeIndex];
+
+        for (let i = 0; i < NODE_COUNT; i++) {
+          const p = gen(i, NODE_COUNT);
+          toPos[i * 3 + 0] = p.x;
+          toPos[i * 3 + 1] = p.y + CORE_Y;
+          toPos[i * 3 + 2] = p.z;
+        }
+
+        morphing = true;
+        morphT = 0;
+      }
+
+      function easeInOutCubic(t) {
+        return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      }
+
+      function setControlState(el, on) {
+        el.classList.toggle("active", !!on);
+        el.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+
+      function pulseControl(el) {
+        el.classList.add("pulse");
+        window.setTimeout(() => el.classList.remove("pulse"), 220);
+      }
+
+      function resetAutoCycle(now = performance.now()) {
+        nextAutoSwitchAt = now + AUTO_SWITCH_MS;
+      }
+
+      function syncModeLockControl() {
+        setControlState(swModeLock, modeLocked);
+        swModeLock.setAttribute(
+          "aria-label",
+          modeLocked ? "Unlock automatic mode switching" : "Lock the current mode"
+        );
+      }
+
+      function cycleMode() {
+        startMorph((modeIndex + 1) % MODE_NAMES.length);
+        pulseControl(btnNext);
+      }
+
+      swTrails.addEventListener("click", () => {
+        trailsOn = !trailsOn;
+        trails.visible = trailsOn;
+        setControlState(swTrails, trailsOn);
+      });
+
+      swGlow.addEventListener("click", () => {
+        glowOn = !glowOn;
+        mat.uniforms.glow.value = glowOn ? 1.0 : 0.55;
+        if (bloomPass) bloomPass.strength = glowOn ? (isMobile ? 0.35 : 0.6) : 0.0;
+        setControlState(swGlow, glowOn);
+      });
+
+      btnNext.addEventListener("click", () => {
+        cycleMode();
+        resetAutoCycle();
+      });
+
+      swModeLock.addEventListener("click", () => {
+        modeLocked = !modeLocked;
+        syncModeLockControl();
+        resetAutoCycle();
+      });
+
+      setControlState(swTrails, trailsOn);
+      setControlState(swGlow, glowOn);
+      syncModeLockControl();
+
+      let t = 0;
+
+      function tick() {
+        requestAnimationFrame(tick);
+        t += prefersReduced ? 0.006 : 0.012;
+        const now = performance.now();
+
+        mat.uniforms.time.value = t;
+        tMat.uniforms.time.value = t;
+
+        rot.x += (targetRot.x - rot.x) * 0.06;
+        rot.y += (targetRot.y - rot.y) * 0.06;
+
+        if (!morphing) {
+          if (modeIndex === 0) {
+            autoSpinY += 0.0022;
+          } else if (modeIndex === 1) {
+            autoSpinY += 0.0019;
+          } else {
+            autoSpinY += 0.0013;
+          }
+        }
+
+        const autoTiltX =
+          modeIndex === 0
+            ? Math.sin(t * 0.75) * 0.035
+            : modeIndex === 1
+              ? Math.sin(t * 1.15) * 0.12
+              : Math.sin(t * 0.5) * 0.055;
+
+        core.rotation.x = rot.x + autoTiltX;
+        core.rotation.y = rot.y + autoSpinY;
+
+        camera.position.z = 170 + Math.sin(t * 0.6) * 1.5;
+        camera.lookAt(0, CORE_Y, 0);
+
+        if (trailsOn) {
+          const p = tGeo.getAttribute("position").array;
+          for (let i = 0; i < TRAIL_COUNT; i++) {
+            const iy = i * 3 + 1;
+            p[iy] += 0.22;
+            if (p[iy] > 95 + CORE_Y) p[iy] = -95 + CORE_Y;
+          }
+          tGeo.getAttribute("position").needsUpdate = true;
+        }
+
+        if (morphing) {
+          morphT += isMobile ? 0.02 : 0.018;
+          const eased = easeInOutCubic(Math.min(1, morphT));
+          for (let i = 0; i < positions.length; i++) {
+            positions[i] = fromPos[i] * (1 - eased) + toPos[i] * eased;
+          }
+          geo.getAttribute("position").needsUpdate = true;
+          if (morphT >= 1) morphing = false;
+        }
+
+        if (!modeLocked && !morphing && document.visibilityState === "visible" && now >= nextAutoSwitchAt) {
+          cycleMode();
+          resetAutoCycle(now);
+        }
+
+        if (glowOn && composer) {
+          composer.render();
+        } else {
+          renderer.render(scene, camera);
+        }
+      }
+
+      tick();
+      document.addEventListener("visibilitychange", () => resetAutoCycle());
+      window.addEventListener("resize", sizeStage);
+    }
+
+    const projectsStage = document.getElementById("projects-particle-stage");
+
+    if (projectsStage && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      const compactProjects = matchMedia("(max-width: 900px)").matches;
+      const PROJECT_NODE_COUNT = compactProjects ? 1400 : 2200;
+      const PROJECT_TRAIL_COUNT = compactProjects ? 180 : 320;
+
+      const projectScene = new THREE.Scene();
+      const projectCamera = new THREE.PerspectiveCamera(56, 1, 0.1, 1200);
+      projectCamera.position.set(0, 0, 128);
+
+      const projectRenderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+        powerPreference: "high-performance"
+      });
+
+      projectRenderer.setClearColor(0x000000, 0);
+      projectsStage.appendChild(projectRenderer.domElement);
+
+      function randomBetween(min, max) {
+        return min + Math.random() * (max - min);
+      }
+
+      function makeSharedPointTexture() {
+        const canvas = document.createElement("canvas");
+        canvas.width = 128;
+        canvas.height = 128;
+        const ctx = canvas.getContext("2d");
+        const grad = ctx.createRadialGradient(64, 64, 0, 64, 64, 64);
+        grad.addColorStop(0, "rgba(255,255,255,1)");
+        grad.addColorStop(0.35, "rgba(255,255,255,0.65)");
+        grad.addColorStop(0.7, "rgba(255,255,255,0.15)");
+        grad.addColorStop(1, "rgba(255,255,255,0)");
+        ctx.fillStyle = grad;
+        ctx.fillRect(0, 0, 128, 128);
+        return new THREE.CanvasTexture(canvas);
+      }
+
+      const projectPointTexture = makeSharedPointTexture();
+      const projectBaseColor = new THREE.Color("#00ffff");
+
+      function projectColorize(i) {
+        const hsl = {};
+        projectBaseColor.getHSL(hsl);
+        const hue = (hsl.h + (i / PROJECT_NODE_COUNT) * 0.18) % 1;
+        const sat = Math.min(1, Math.max(0.55, hsl.s));
+        const lit = Math.min(0.72, Math.max(0.34, hsl.l + Math.sin(i * 0.013) * 0.05));
+        return new THREE.Color().setHSL(hue, sat, lit);
+      }
+
+      function sizeProjectsStage() {
+        const rect = projectsStage.getBoundingClientRect();
+        const width = Math.max(1, Math.floor(rect.width));
+        const height = Math.max(1, Math.floor(rect.height));
+        projectRenderer.setSize(width, height, false);
+        projectRenderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        projectCamera.aspect = width / height;
+        projectCamera.updateProjectionMatrix();
+      }
+
+      const projectGeo = new THREE.BufferGeometry();
+      const projectPositions = new Float32Array(PROJECT_NODE_COUNT * 3);
+      const projectColors = new Float32Array(PROJECT_NODE_COUNT * 3);
+      const projectSizes = new Float32Array(PROJECT_NODE_COUNT);
+
+      for (let i = 0; i < PROJECT_NODE_COUNT; i++) {
+        projectPositions[i * 3 + 0] = randomBetween(-118, 118);
+        projectPositions[i * 3 + 1] = randomBetween(-58, 58);
+        projectPositions[i * 3 + 2] = randomBetween(-70, 70);
+
+        const c = projectColorize(i);
+        projectColors[i * 3 + 0] = c.r;
+        projectColors[i * 3 + 1] = c.g;
+        projectColors[i * 3 + 2] = c.b;
+        projectSizes[i] = compactProjects ? randomBetween(1.05, 2.05) : randomBetween(1.2, 2.55);
+      }
+
+      projectGeo.setAttribute("position", new THREE.BufferAttribute(projectPositions, 3));
+      projectGeo.setAttribute("color", new THREE.BufferAttribute(projectColors, 3));
+      projectGeo.setAttribute("size", new THREE.BufferAttribute(projectSizes, 1));
+
+      const projectMat = new THREE.ShaderMaterial({
+        uniforms: {
+          time: { value: 0 },
+          tex: { value: projectPointTexture },
+          glow: { value: 1.08 }
+        },
+        vertexShader: `
+            attribute vec3 color;
+            attribute float size;
+            varying vec3 vColor;
+            uniform float time;
+            uniform float glow;
+            void main() {
+              vColor = color * glow;
+              vec3 p = position;
+              p.y += sin(time * 1.2 + position.x * 0.03) * 1.8;
+              p.x += cos(time * 0.85 + position.y * 0.025) * 0.9;
+              vec4 mv = modelViewMatrix * vec4(p, 1.0);
+              gl_PointSize = size * (290.0 / -mv.z);
+              gl_Position = projectionMatrix * mv;
+            }
+          `,
+        fragmentShader: `
+            uniform sampler2D tex;
+            varying vec3 vColor;
+            void main() {
+              vec4 t = texture2D(tex, gl_PointCoord);
+              gl_FragColor = vec4(vColor, t.a);
+            }
+          `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const projectCore = new THREE.Points(projectGeo, projectMat);
+      projectScene.add(projectCore);
+
+      const projectTrailGeo = new THREE.BufferGeometry();
+      const projectTrailPositions = new Float32Array(PROJECT_TRAIL_COUNT * 3);
+      const projectTrailColors = new Float32Array(PROJECT_TRAIL_COUNT * 3);
+      const projectTrailSizes = new Float32Array(PROJECT_TRAIL_COUNT);
+
+      for (let i = 0; i < PROJECT_TRAIL_COUNT; i++) {
+        projectTrailPositions[i * 3 + 0] = randomBetween(-120, 120);
+        projectTrailPositions[i * 3 + 1] = randomBetween(-64, 64);
+        projectTrailPositions[i * 3 + 2] = randomBetween(-74, 74);
+
+        const c = projectColorize(Math.floor(randomBetween(0, PROJECT_NODE_COUNT)));
+        projectTrailColors[i * 3 + 0] = c.r;
+        projectTrailColors[i * 3 + 1] = c.g;
+        projectTrailColors[i * 3 + 2] = c.b;
+        projectTrailSizes[i] = compactProjects ? randomBetween(0.62, 1.18) : randomBetween(0.76, 1.48);
+      }
+
+      projectTrailGeo.setAttribute("position", new THREE.BufferAttribute(projectTrailPositions, 3));
+      projectTrailGeo.setAttribute("color", new THREE.BufferAttribute(projectTrailColors, 3));
+      projectTrailGeo.setAttribute("size", new THREE.BufferAttribute(projectTrailSizes, 1));
+
+      const projectTrailMat = new THREE.ShaderMaterial({
+        uniforms: {
+          time: { value: 0 },
+          tex: { value: projectPointTexture }
+        },
+        vertexShader: `
+            attribute vec3 color;
+            attribute float size;
+            varying vec3 vColor;
+            uniform float time;
+            void main() {
+              vColor = color;
+              vec3 p = position;
+              p.x += sin(time * 1.45 + p.y * 0.025) * 0.4;
+              vec4 mv = modelViewMatrix * vec4(p, 1.0);
+              gl_PointSize = size * (268.0 / -mv.z);
+              gl_Position = projectionMatrix * mv;
+            }
+          `,
+        fragmentShader: `
+            uniform sampler2D tex;
+            varying vec3 vColor;
+            void main() {
+              vec4 t = texture2D(tex, gl_PointCoord);
+              gl_FragColor = vec4(vColor, t.a);
+            }
+          `,
+        transparent: true,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending
+      });
+
+      const projectTrails = new THREE.Points(projectTrailGeo, projectTrailMat);
+      projectScene.add(projectTrails);
+
+      sizeProjectsStage();
+
+      let projectTime = 0;
+      let projectRaf = 0;
+      let projectRunning = false;
+
+      function renderProjectsStage() {
+        if (!projectRunning) {
+          return;
+        }
+
+        projectRaf = requestAnimationFrame(renderProjectsStage);
+        projectTime += 0.006;
+
+        projectMat.uniforms.time.value = projectTime;
+        projectTrailMat.uniforms.time.value = projectTime;
+
+        projectCore.rotation.y += 0.0009;
+        projectCore.rotation.x = Math.sin(projectTime * 0.5) * 0.05;
+        projectTrails.rotation.y -= 0.00065;
+
+        const trailPos = projectTrailGeo.getAttribute("position").array;
+        for (let i = 0; i < PROJECT_TRAIL_COUNT; i++) {
+          const ix = i * 3;
+          const iy = ix + 1;
+          trailPos[iy] += 0.12;
+          trailPos[ix] += Math.sin(projectTime + i * 0.07) * 0.018;
+          if (trailPos[iy] > 72) {
+            trailPos[iy] = -72;
+            trailPos[ix] = randomBetween(-120, 120);
+            trailPos[ix + 2] = randomBetween(-74, 74);
+          }
+        }
+        projectTrailGeo.getAttribute("position").needsUpdate = true;
+
+        projectRenderer.render(projectScene, projectCamera);
+      }
+
+      function startProjectsStage() {
+        if (projectRunning) return;
+        projectRunning = true;
+        renderProjectsStage();
+      }
+
+      function stopProjectsStage() {
+        projectRunning = false;
+        if (projectRaf) {
+          cancelAnimationFrame(projectRaf);
+          projectRaf = 0;
+        }
+      }
+
+      const projectObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting && document.visibilityState === "visible") {
+              startProjectsStage();
+            } else {
+              stopProjectsStage();
+            }
+          });
+        },
+        { threshold: 0.12 }
+      );
+
+      projectObserver.observe(projectsStage);
+
+      window.addEventListener("resize", sizeProjectsStage);
+      document.addEventListener("visibilitychange", () => {
+        if (document.hidden) {
+          stopProjectsStage();
+        } else if (projectsStage.getBoundingClientRect().bottom > 0) {
+          startProjectsStage();
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>
