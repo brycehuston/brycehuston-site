@@ -120,37 +120,58 @@ main::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  padding: 10px 14px;
+  gap: 1.45rem;
+  padding: 9px 26px;
   border-radius: 18px;
   background: rgba(0, 0, 0, 0.55);
   border: 1px solid rgba(0, 255, 255, 0.18);
   backdrop-filter: blur(14px);
   box-shadow: 0 0 18px rgba(0, 255, 255, 0.1);
-  width: min(980px, calc(100vw - 28px));
+  width: min(1100px, calc(100vw - 24px));
 }
 
 .hero-brand {
-  display: inline-flex;
+  display: inline-grid;
+  grid-template-columns: 0.75rem auto 0.75rem;
   align-items: center;
-  gap: 0.85rem;
-  margin-right: 0.35rem;
+  column-gap: 0.72rem;
+  margin-left: 0.35rem;
+  margin-right: 1.45rem;
+  flex: 0 0 auto;
 }
 
-.brand-dot {
-  width: 0.75rem;
-  height: 0.75rem;
+.hero-brand::after {
+  content: "";
+  display: block;
+  width: 0.38rem;
+  height: 0.38rem;
+  justify-self: center;
   border-radius: 999px;
   background: #00f5ff;
   box-shadow:
-    0 0 12px rgba(0, 245, 255, 0.5),
-    0 0 24px rgba(67, 118, 255, 0.18);
+    0 0 8px rgba(0, 245, 255, 0.34),
+    0 0 16px rgba(67, 118, 255, 0.12);
+  animation: brandDotShift 6.8s ease-in-out infinite;
+}
+
+.brand-dot {
+  width: 0.38rem;
+  height: 0.38rem;
+  justify-self: center;
+  border-radius: 999px;
+  background: #00f5ff;
+  box-shadow:
+    0 0 8px rgba(0, 245, 255, 0.34),
+    0 0 16px rgba(67, 118, 255, 0.12);
   animation: brandDotShift 6.8s ease-in-out infinite;
 }
 
 .brand-lockup {
   display: grid;
   width: 6.55ch;
+  margin: 0;
+  justify-items: center;
+  text-align: center;
   line-height: 1.03;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -179,6 +200,7 @@ main::before {
   font-size: 0.93rem;
   letter-spacing: 0.01em;
   flex: 1 1 auto;
+  min-width: 0;
 }
 
 .hero-nav a {
@@ -217,8 +239,10 @@ main::before {
 }
 
 .nav-cta {
-  min-height: 2.55rem;
-  padding-inline: 0.95rem;
+  min-height: 1.98rem;
+  padding-inline: 0.84rem;
+  margin-left: 1.2rem;
+  flex: 0 0 auto;
 }
 
 .hero-control-stack {
@@ -2268,6 +2292,58 @@ h3 {
 .explore-card:hover .media-block::before {
   opacity: 1;
   transform: translateX(150%);
+}
+
+.media-alpha-alerts,
+.media-price-wise,
+.media-3d-sky,
+.media-ray-photo,
+.media-tiger-photo,
+.media-diving-photo {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.media-alpha-alerts {
+  background-image:
+    linear-gradient(180deg, rgba(2, 10, 18, 0.18), rgba(2, 10, 18, 0.34)),
+    url("site screenshots/Site_Pics/homepage-pics/1alpha-alerts-hero.png");
+}
+
+.media-price-wise {
+  background-image:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(4, 11, 20, 0.08)),
+    url("site screenshots/Site_Pics/homepage-pics/2price-wise-site.png");
+  background-position: center top;
+}
+
+.media-3d-sky {
+  background-image:
+    linear-gradient(180deg, rgba(5, 10, 18, 0.1), rgba(5, 10, 18, 0.22)),
+    url("site screenshots/Site_Pics/homepage-pics/3d-blockchain-page.png");
+  background-position: center center;
+}
+
+.media-ray-photo {
+  background-image:
+    linear-gradient(180deg, rgba(4, 10, 18, 0.06), rgba(4, 10, 18, 0.2)),
+    url("site screenshots/Site_Pics/homepage-pics/4-string-ray-photo.JPG");
+  background-position: center center;
+}
+
+.media-tiger-photo {
+  background-image:
+    linear-gradient(180deg, rgba(4, 10, 18, 0.06), rgba(4, 10, 18, 0.18)),
+    url("site screenshots/Site_Pics/homepage-pics/5tiger-man.JPG");
+  background-position: center 32%;
+}
+
+.media-diving-photo {
+  background-image:
+    linear-gradient(180deg, rgba(4, 10, 18, 0.04), rgba(4, 10, 18, 0.18)),
+    url("site screenshots/Site_Pics/homepage-pics/6diving-photo.jpg");
+  background-position: center 38%;
 }
 
 @media (max-width: 1100px) {

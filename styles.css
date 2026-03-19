@@ -123,14 +123,14 @@ a {
 
 .topbar {
   position: sticky;
-  top: 1rem;
+  top: 0.8rem;
   z-index: 20;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  gap: var(--space-3);
+  gap: 1.2rem;
   margin-top: 1rem;
-  padding: 0.95rem 1.2rem;
+  padding: 0.85rem 1.15rem;
   border-radius: 999px;
   background: rgba(8, 12, 18, 0.68);
   border: 1px solid rgba(192, 219, 242, 0.12);
@@ -173,7 +173,7 @@ a {
 .nav {
   display: flex;
   justify-content: center;
-  gap: 1.35rem;
+  gap: 1.15rem;
   flex-wrap: wrap;
   color: var(--text-muted);
 }
@@ -282,8 +282,8 @@ a {
 }
 
 .button-small {
-  min-height: 2.9rem;
-  padding-inline: 1.1rem;
+  min-height: 2.72rem;
+  padding-inline: 1rem;
 }
 
 .button-primary {
@@ -323,7 +323,7 @@ main {
 }
 
 .section {
-  padding: var(--space-6) 0 0;
+  padding: 5rem 0 0;
 }
 
 .home-hero {
@@ -435,8 +435,8 @@ h3 {
 }
 
 .section-intro {
-  max-width: 46rem;
-  margin-bottom: 2rem;
+  max-width: 42rem;
+  margin-bottom: 1.65rem;
 }
 
 .section-intro.compact {
@@ -539,6 +539,8 @@ h3 {
     linear-gradient(135deg, rgba(15, 24, 36, 0.98), rgba(27, 38, 54, 0.94) 55%, rgba(15, 23, 35, 0.98));
   border: 1px solid rgba(199, 225, 248, 0.12);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  background-size: cover;
+  background-position: center;
 }
 
 .placeholder-media::before {
@@ -562,6 +564,85 @@ h3 {
   color: var(--text-muted);
   font-size: 0.8rem;
   letter-spacing: 0.04em;
+}
+
+.placeholder-media.has-image::before,
+.placeholder-media.has-image::after {
+  display: none;
+}
+
+.placeholder-media.no-label::after {
+  display: none;
+}
+
+.media-about-bryce {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.48)),
+    url("site screenshots/Site_Pics/homepage-pics/6diving-photo.jpg");
+  background-position: center 18%;
+}
+
+.media-project-alpha {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.14), rgba(7, 12, 18, 0.38)),
+    url("site screenshots/Site_Pics/homepage-pics/1alpha-alerts-hero.png");
+  background-position: center top;
+}
+
+.media-project-pricewise {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.1), rgba(7, 12, 18, 0.24)),
+    url("site screenshots/Site_Pics/homepage-pics/2price-wise-site.png");
+  background-position: center center;
+}
+
+.media-project-3d {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.12), rgba(7, 12, 18, 0.24)),
+    url("site screenshots/Site_Pics/homepage-pics/3d-blockchain-page.png");
+  background-position: center center;
+}
+
+.media-explore-hero {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.38)),
+    url("site screenshots/Site_Pics/homepage-pics/5tiger-man.JPG");
+  background-position: center top;
+}
+
+.media-explore-ray {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.24)),
+    url("site screenshots/Site_Pics/homepage-pics/4-string-ray-photo.JPG");
+  background-position: center center;
+}
+
+.media-explore-ray-wide {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.1), rgba(7, 12, 18, 0.3)),
+    url("site screenshots/Site_Pics/homepage-pics/4-string-ray-photo.JPG");
+  background-position: center 58%;
+}
+
+.media-explore-tiger {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.3)),
+    url("site screenshots/Site_Pics/homepage-pics/5tiger-man.JPG");
+  background-position: center center;
+}
+
+.media-explore-diving {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.08), rgba(7, 12, 18, 0.28)),
+    url("site screenshots/Site_Pics/homepage-pics/6diving-photo.jpg");
+  background-position: center 32%;
+}
+
+.media-explore-diving-wide {
+  background-image:
+    linear-gradient(180deg, rgba(7, 12, 18, 0.12), rgba(7, 12, 18, 0.34)),
+    url("site screenshots/Site_Pics/homepage-pics/6diving-photo.jpg");
+  background-position: center 30%;
 }
 
 .placeholder-media.landscape {
@@ -773,19 +854,38 @@ h3 {
 }
 
 .faq-item summary {
+  position: relative;
   cursor: pointer;
   list-style: none;
   font-weight: 600;
+  padding-right: 2rem;
 }
 
 .faq-item summary::-webkit-details-marker {
   display: none;
 }
 
+.faq-item summary::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-strong);
+}
+
+.faq-item[open] summary::after {
+  content: "−";
+}
+
 .faq-item[open] {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03)),
     var(--bg-panel-strong);
+}
+
+.faq-item p {
+  margin-top: 0.95rem;
 }
 
 .closing-card {
@@ -892,6 +992,7 @@ h3 {
 
 .contact-grid {
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: start;
 }
 
 .method-grid {
@@ -925,6 +1026,7 @@ h3 {
 .field input,
 .field textarea {
   width: 100%;
+  min-height: 3.15rem;
   padding: 1rem 1.05rem;
   border-radius: 1rem;
   border: 1px solid rgba(193, 221, 245, 0.14);
@@ -1068,8 +1170,13 @@ h3 {
 @media (max-width: 960px) {
   .topbar {
     grid-template-columns: 1fr;
-    justify-items: start;
+    justify-items: stretch;
+    gap: 0.9rem;
     border-radius: 1.5rem;
+  }
+
+  .nav {
+    justify-content: flex-start;
   }
 
   .topbar-cta {
@@ -1130,5 +1237,9 @@ h3 {
   .footer {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .button-small {
+    min-height: 2.6rem;
   }
 }
