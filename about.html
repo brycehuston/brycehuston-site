@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="About Bryce Huston: founder-led digital work built around clarity, craft, and stronger execution." />
-    <title>Bryce Huston | About</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="site-shell">
-      <div class="ambient ambient-one" aria-hidden="true"></div>
-      <div class="ambient ambient-two" aria-hidden="true"></div>
-      <div class="ambient ambient-three" aria-hidden="true"></div>
 
-      <header class="topbar">
-        <a class="brand" href="index.html">
-          <span class="brand-mark"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Bryce Huston: founder-led digital work shaped by clarity, systems thinking, and a high bar for finish." />
+  <title>Bryce Huston | About</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="homepage.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="interior-page about-page">
+  <div class="home-shell interior-shell">
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <main class="interior-main">
+      <header class="hero-nav-bar">
+        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+          <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="nav" aria-label="Primary">
+        <nav class="hero-nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a class="active" href="about.html">About</a>
           <a href="projects.html">Projects</a>
@@ -31,144 +36,187 @@
           <a href="explore.html">Explore</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="button button-primary button-small topbar-cta" href="contact.html">Work With Me</a>
+        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
       </header>
 
-      <main class="page-shell">
-        <section class="page-hero compact">
-          <div class="page-copy reveal">
-            <p class="eyebrow">About Bryce</p>
-            <h1>Founder-led work with a higher standard.</h1>
-            <p class="lead">
-              Bryce builds premium websites, sharper systems, and digital work
-              that feels clear on the surface and solid underneath.
+      <section class="page-hero-section">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy reveal">
+            <p class="hero-kicker">About Bryce</p>
+            <h1 data-title-reveal>Built Close To The Work.</h1>
+            <p class="page-lead">
+              I design and build digital work that reads clearly, holds up underneath,
+              and stays founder-led from the first direction call through the finish.
             </p>
             <div class="hero-actions">
               <a class="button button-primary" href="projects.html">View Projects</a>
-              <a class="button button-secondary" href="contact.html">Work With Me</a>
+              <a class="button button-secondary" href="contact.html">Start A Conversation</a>
             </div>
           </div>
-          <div class="motion-surface reveal" data-delay="120">
-            <div class="placeholder-media portrait has-image media-about-bryce" aria-label="Bryce Huston portrait"></div>
-          </div>
-        </section>
 
-        <section class="section">
-          <div class="split-layout">
-            <article class="section-card reveal">
-              <p class="eyebrow">Story</p>
-              <h2>Founder-led direction with stronger execution.</h2>
-              <p>
-                The work sits between creative direction and real build quality:
-                sharper messaging, cleaner interfaces, and systems that stay
-                considered all the way through.
-              </p>
-            </article>
-            <article class="section-card reveal" data-delay="120">
-              <p class="eyebrow">Snapshot</p>
-              <div class="metrics-row">
-                <div class="metric-card">
-                  <p class="meta-label">What I build</p>
-                  <strong>Brand, web, and systems</strong>
-                </div>
-                <div class="metric-card">
-                  <p class="meta-label">Service branch</p>
-                  <strong>Huston Solutions</strong>
-                </div>
-                <div class="metric-card">
-                  <p class="meta-label">Outside the screen</p>
-                  <strong>Travel, diving, creator projects</strong>
-                </div>
+          <div class="page-hero-aside reveal reveal-soft" data-delay="110">
+            <article class="panel page-media-card frame-trace-card" data-frame-trace="about-hero">
+              <div class="page-media portrait-media">
+                <img src="media/about/about-bryce-headshot-1.jpg" alt="Bryce Huston portrait" loading="eager" />
+              </div>
+              <div class="page-panel-copy">
+                <p class="project-meta">Founder-led digital direction</p>
+                <h3>Clear calls. Real build discipline.</h3>
+                <p>
+                  The work lives at the intersection of brand presence, interface quality,
+                  and systems that can actually carry the load.
+                </p>
               </div>
             </article>
           </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">What I value</p>
-            <h2>The work gets better when the standards stay high.</h2>
-          </div>
-          <div class="card-grid four">
-            <article class="section-card reveal">
-              <p class="meta-label">Value</p>
-              <h3>Clarity</h3>
-              <p>Cleaner thinking, sharper messaging, and interfaces that read quickly.</p>
-            </article>
-            <article class="section-card reveal" data-delay="80">
-              <p class="meta-label">Value</p>
-              <h3>Craft</h3>
-              <p>Details decide whether the work feels finished or simply done.</p>
-            </article>
-            <article class="section-card reveal" data-delay="160">
-              <p class="meta-label">Value</p>
-              <h3>Curiosity</h3>
-              <p>Range and real-life perspective keep the work from feeling narrow or repetitive.</p>
-            </article>
-            <article class="section-card reveal" data-delay="240">
-              <p class="meta-label">Value</p>
-              <h3>Usefulness</h3>
-              <p>The best-looking work still has to solve something real and ship cleanly.</p>
-            </article>
-          </div>
-        </section>
+      <section class="content-section interior-section">
+        <div class="feature-layout">
+          <article class="panel page-copy-panel reveal frame-trace-card" data-frame-trace="about-foundation">
+            <p class="eyebrow">Foundation</p>
+            <h2 data-title-reveal>Design sense with builder instincts.</h2>
+            <p>
+              I care about how the work feels in the first three seconds and how it behaves
+              once people start using it. That usually means stronger hierarchy, fewer weak
+              decisions, and more attention to what happens below the visual layer.
+            </p>
+            <p>
+              BryceHuston.com is the personal brand surface. Huston Solutions is the service
+              arm. The standard stays the same across both.
+            </p>
+          </article>
 
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">How I work</p>
-            <h2>Direct collaboration, cleaner decisions, better finish.</h2>
+          <div class="support-stack">
+            <article class="panel mini-detail-card reveal frame-trace-card" data-delay="80"
+              data-frame-trace="about-focus">
+              <p class="eyebrow">Where I focus</p>
+              <ul class="detail-list">
+                <li>Premium websites and landing pages</li>
+                <li>Sharper product and dashboard surfaces</li>
+                <li>Automation and system cleanup</li>
+              </ul>
+            </article>
+            <article class="panel mini-detail-card reveal frame-trace-card" data-delay="160"
+              data-frame-trace="about-snapshot">
+              <p class="eyebrow">Snapshot</p>
+              <div class="stat-chip-row">
+                <span class="page-chip">10+ years in tech</span>
+                <span class="page-chip">7+ years building trust</span>
+                <span class="page-chip">Vancouver-based</span>
+              </div>
+            </article>
           </div>
-          <div class="timeline-grid">
-            <article class="section-card timeline-card reveal">
-              <strong>01 / Direct communication</strong>
-              <p>Fewer handoffs, clearer decisions, and faster alignment.</p>
-            </article>
-            <article class="section-card timeline-card reveal" data-delay="80">
-              <strong>02 / Build discipline</strong>
-              <p>Structure, spacing, systems, and polish are handled with intention from the start.</p>
-            </article>
-            <article class="section-card timeline-card reveal" data-delay="160">
-              <strong>03 / Strategy into execution</strong>
-              <p>Ideas turn into real interfaces, systems, and assets that can actually ship.</p>
-            </article>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section class="section">
-          <div class="section-card callout-grid reveal">
-            <div>
-              <p class="eyebrow">Life beyond work</p>
-              <h2>Range matters when it still feels curated.</h2>
-              <p>
-                Explore holds the travel, diving, and life moments that add
-                depth to the brand without turning the site into a random feed.
-              </p>
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">What Matters</p>
+          <h2 data-title-reveal>Taste helps. Systems finish the job.</h2>
+          <p class="section-support">
+            The best work carries both.
+          </p>
+        </div>
+        <div class="card-grid-3">
+          <article class="panel value-card reveal frame-trace-card" data-frame-trace="about-values">
+            <p class="project-meta">Clarity</p>
+            <h3>It should read fast.</h3>
+            <p>Stronger hierarchy, cleaner language, and less filler between the idea and the user.</p>
+          </article>
+          <article class="panel value-card reveal frame-trace-card" data-delay="90" data-frame-trace="about-values">
+            <p class="project-meta">Finish</p>
+            <h3>Details should stay controlled.</h3>
+            <p>Spacing, motion, responsiveness, and polish all need to feel authored, not assembled.</p>
+          </article>
+          <article class="panel value-card reveal frame-trace-card" data-delay="180" data-frame-trace="about-values">
+            <p class="project-meta">Range</p>
+            <h3>Real life keeps the work sharper.</h3>
+            <p>Travel, diving, and perspective outside the screen keep the brand from feeling flat or overly online.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">How I Work</p>
+          <h2 data-title-reveal data-title-variant="double">Direct line. Cleaner decisions.</h2>
+          <p class="section-support">
+            Less dilution. Better follow-through.
+          </p>
+        </div>
+        <div class="card-grid-3 timeline-grid-premium">
+          <article class="panel timeline-panel reveal frame-trace-card" data-frame-trace="about-process">
+            <strong>01</strong>
+            <h3>Stay close to the brief.</h3>
+            <p>Shorter loops, clearer tradeoffs, and fewer handoffs between the thinking and the build.</p>
+          </article>
+          <article class="panel timeline-panel reveal frame-trace-card" data-delay="90" data-frame-trace="about-process">
+            <strong>02</strong>
+            <h3>Build the structure early.</h3>
+            <p>Typography, pacing, motion, and system decisions are part of the foundation, not cleanup.</p>
+          </article>
+          <article class="panel timeline-panel reveal frame-trace-card" data-delay="180"
+            data-frame-trace="about-process">
+            <strong>03</strong>
+            <h3>Keep the standard up.</h3>
+            <p>The work should still feel considered on mobile, in motion, and once the real content shows up.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="feature-layout feature-layout-reverse personal-layout">
+          <article class="panel page-copy-panel reveal frame-trace-card" data-frame-trace="about-explore">
+            <p class="eyebrow">Outside Work</p>
+            <h2 data-title-reveal>Explore keeps the brand human.</h2>
+            <p>
+              Travel, diving, and the better life moments live there on purpose. It adds depth
+              without turning the site into a dump of everything I have ever photographed.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-secondary" href="explore.html">Go To Explore</a>
             </div>
-            <div class="callout-actions">
-              <a class="button button-secondary" href="explore.html">Explore</a>
-            </div>
-          </div>
-        </section>
-      </main>
+          </article>
 
-      <footer class="footer">
-        <div>
-          <a class="brand footer-brand" href="index.html">
-            <span class="brand-mark"></span>
-            <span class="brand-lockup">
+          <div class="dual-media-stack reveal reveal-soft" data-delay="100">
+            <article class="panel page-media-card frame-trace-card" data-frame-trace="about-life">
+              <div class="page-media square-media">
+                <img src="media/about/photo1.jpg" alt="Bryce Huston seated at dinner in a blazer" loading="lazy" />
+              </div>
+            </article>
+            <article class="panel page-media-card frame-trace-card" data-frame-trace="about-life">
+              <div class="page-media square-media">
+                <img src="media/about/photo2.jpg" alt="Bryce Huston in a suit beside a large waterfront window"
+                  loading="lazy" />
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+            <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
-          <p>Founder page focused on standards, working style, and what sits behind the finish.</p>
-        </div>
-        <div class="footer-links">
-          <a href="projects.html">Projects</a>
-          <a href="solutions.html">Solutions</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="footer-note">Founder-led digital work</p>
         </div>
       </footer>
-    </div>
-  </body>
+    </main>
+  </div>
+</body>
+
 </html>

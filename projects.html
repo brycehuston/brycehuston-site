@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Selected projects by Bryce Huston, focused on premium websites, product surfaces, and clean digital execution." />
-    <title>Bryce Huston | Projects</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="site-shell">
-      <div class="ambient ambient-one" aria-hidden="true"></div>
-      <div class="ambient ambient-two" aria-hidden="true"></div>
-      <div class="ambient ambient-three" aria-hidden="true"></div>
 
-      <header class="topbar">
-        <a class="brand" href="index.html">
-          <span class="brand-mark"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Selected projects by Bryce Huston across product UI, premium websites, interactive experiences, and automation." />
+  <title>Bryce Huston | Projects</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="homepage.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="interior-page projects-page">
+  <div class="home-shell interior-shell">
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <main class="interior-main">
+      <header class="hero-nav-bar">
+        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+          <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="nav" aria-label="Primary">
+        <nav class="hero-nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a class="active" href="projects.html">Projects</a>
@@ -31,143 +36,229 @@
           <a href="explore.html">Explore</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="button button-primary button-small topbar-cta" href="contact.html">Work With Me</a>
+        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
       </header>
 
-      <main class="page-shell">
-        <section class="page-hero compact">
-          <div class="page-copy reveal">
-            <p class="eyebrow">Projects</p>
-            <h1>Selected work with real screen presence.</h1>
-            <p class="lead">
-              A few strong projects should do the proving first. The rest
-              should support the impression, not dilute it.
+      <section class="page-hero-section">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy reveal">
+            <p class="hero-kicker">Projects</p>
+            <h1 data-title-reveal>Proof, Not Volume.</h1>
+            <p class="page-lead">
+              The strongest work should carry the page first. Everything else stays in support.
             </p>
-          </div>
-          <div class="motion-surface reveal" data-delay="120">
-            <div class="floating-card floating-card-top">
-              <p class="meta-label">Selection rule</p>
-              <strong>Lead with the strongest work</strong>
-              <p>If a project does not help the first impression, it should stay secondary.</p>
-            </div>
-            <div class="hero-core">
-              <div class="hero-ring hero-ring-one"></div>
-              <div class="hero-ring hero-ring-two"></div>
-              <div class="hero-center-glow"></div>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Featured projects</p>
-            <h2>A few projects should do the proving.</h2>
-          </div>
-          <div class="card-grid three">
-            <article class="project-card section-card reveal">
-              <div class="placeholder-media landscape has-image media-project-alpha" aria-label="Alpha Alerts project preview"></div>
-              <div class="card-body">
-                <p class="meta-label">Trading signals / dashboard / product UI</p>
-                <h3>Alpha Alerts Pro</h3>
-                <p>A sharper product surface built to organize noise, signal urgency, and feel credible at a glance.</p>
-                <a class="text-link" href="contact.html">Ask About This Project</a>
-              </div>
-            </article>
-            <article class="project-card section-card reveal" data-delay="100">
-              <div class="placeholder-media landscape has-image media-project-pricewise" aria-label="PriceWise project preview"></div>
-              <div class="card-body">
-                <p class="meta-label">Retail / landing page / conversion</p>
-                <h3>PriceWise</h3>
-                <p>A brighter retail concept built to scan fast, put the product first, and keep the pitch clean.</p>
-                <a class="text-link" href="contact.html">Ask About This Project</a>
-              </div>
-            </article>
-            <article class="project-card section-card reveal" data-delay="200">
-              <div class="placeholder-media landscape has-image media-project-3d" aria-label="3D world project preview"></div>
-              <div class="card-body">
-                <p class="meta-label">Interactive / 3D / brand world</p>
-                <h3>3D Brand World</h3>
-                <p>A playful 3D environment with more personality, without losing structure or readability.</p>
-                <a class="text-link" href="contact.html">Ask About This Project</a>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Additional projects</p>
-            <h2>Supporting work should stay quick to scan.</h2>
-          </div>
-          <div class="card-grid three">
-            <article class="project-card section-card reveal">
-              <div class="placeholder-media square no-label" aria-hidden="true"></div>
-              <div class="card-body">
-                <h3>Founder Site Refresh</h3>
-                <p>Tighter positioning, cleaner sections, and a sharper first impression.</p>
-              </div>
-            </article>
-            <article class="project-card section-card reveal" data-delay="80">
-              <div class="placeholder-media square no-label" aria-hidden="true"></div>
-              <div class="card-body">
-                <h3>Offer Page System</h3>
-                <p>Service messaging, CTA flow, and structure aligned into one cleaner system.</p>
-              </div>
-            </article>
-            <article class="project-card section-card reveal" data-delay="160">
-              <div class="placeholder-media square no-label" aria-hidden="true"></div>
-              <div class="card-body">
-                <h3>Conversion Cleanup</h3>
-                <p>Sharper hierarchy, better pacing, and fewer points of friction from top to bottom.</p>
-              </div>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-card reveal">
-            <p class="eyebrow">Capability band</p>
-            <h2>Range matters, but the bar stays the same.</h2>
-            <ul class="chip-row">
-              <li>Premium marketing sites</li>
-              <li>Front-end systems</li>
-              <li>AI + automation</li>
-              <li>Creative direction</li>
-              <li>Personal brand surfaces</li>
-            </ul>
-          </div>
-        </section>
-
-        <section class="section final-cta">
-          <div class="section-card closing-card reveal">
-            <p class="eyebrow">Next step</p>
-            <h2>If the next build needs clarity, finish, and stronger presence, start here.</h2>
             <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Work With Me</a>
-              <a class="button button-secondary" href="solutions.html">Explore Solutions</a>
+              <a class="button button-primary" href="contact.html">Discuss A Project</a>
+              <a class="button button-secondary" href="solutions.html">See Services</a>
             </div>
           </div>
-        </section>
-      </main>
 
-      <footer class="footer">
-        <div>
-          <a class="brand footer-brand" href="index.html">
-            <span class="brand-mark"></span>
-            <span class="brand-lockup">
+          <div class="page-hero-aside reveal reveal-soft" data-delay="110">
+            <article class="panel metrics-panel frame-trace-card" data-frame-trace="projects-hero">
+              <p class="eyebrow">Selection Logic</p>
+              <div class="stat-chip-row">
+                <span class="page-chip">Flagship product work</span>
+                <span class="page-chip">Showcase-led websites</span>
+                <span class="page-chip page-chip-warm">Systems and automation</span>
+              </div>
+              <p>
+                Weak projects stay out. Strong projects get space, hierarchy, and better storytelling.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Lead Project</p>
+          <h2 data-title-reveal>Alpha Alerts leads the page.</h2>
+          <p class="section-support">
+            Product surface, workflow, and alert delivery in one stronger story.
+          </p>
+        </div>
+
+        <div class="feature-layout project-lead-layout">
+          <article class="panel video-showcase-card reveal reveal-left frame-trace-card" data-frame-trace="project-lead">
+            <div class="page-media widescreen-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="media/projects/1alpha-alerts-hero.png">
+                <source src="media/projects/alpha-alerts-hero.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Alpha Alerts Pro • Signals • Dashboard • Product UI</p>
+              <h3>Signals that cut through noise.</h3>
+              <p>
+                A darker, sharper trading interface built to filter obvious traps, surface risk context,
+                and make alerts feel credible at a glance.
+              </p>
+            </div>
+          </article>
+
+          <div class="support-stack">
+            <article class="panel page-copy-panel reveal reveal-right frame-trace-card" data-delay="80"
+              data-frame-trace="project-alpha-copy">
+              <p class="eyebrow">Why it lands</p>
+              <ul class="detail-list">
+                <li>Cleaner visual hierarchy across urgent signal states</li>
+                <li>Telegram alert delivery supported by product-grade UI</li>
+                <li>Workflow thinking that extends beyond a single hero screen</li>
+              </ul>
+            </article>
+
+            <div class="mini-media-grid">
+              <article class="panel page-media-card reveal reveal-right frame-trace-card" data-delay="140"
+                data-frame-trace="project-alpha-system">
+                <div class="page-media landscape-media">
+                  <video autoplay muted loop playsinline preload="metadata">
+                    <source src="media/projects/aa-system-workflow.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="page-panel-copy compact-copy">
+                  <p class="project-meta">System workflow</p>
+                  <h3>Logic gets surfaced cleanly.</h3>
+                </div>
+              </article>
+
+              <article class="panel page-media-card reveal reveal-right frame-trace-card" data-delay="200"
+                data-frame-trace="project-alpha-alerts">
+                <div class="page-media landscape-media">
+                  <video autoplay muted loop playsinline preload="metadata">
+                    <source src="media/projects/alpha-tg-alerts.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <div class="page-panel-copy compact-copy">
+                  <p class="project-meta">Alert delivery</p>
+                  <h3>Execution stays close to the user.</h3>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Supporting Work</p>
+          <h2 data-title-reveal>Different compositions. Same bar.</h2>
+          <p class="section-support">
+            Showcase-heavy when the project earns it. Simpler when it should stay quick.
+          </p>
+        </div>
+
+        <div class="card-grid-3 showcase-card-grid">
+          <article class="panel showcase-card reveal frame-trace-card" data-frame-trace="project-supporting">
+            <div class="page-media landscape-media">
+              <img src="media/projects/2price-wise-site.png" alt="PriceWise ecommerce landing page screenshot"
+                loading="lazy" />
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">PriceWise • Retail concept • Landing page</p>
+              <h3>Bright retail with a cleaner pitch.</h3>
+              <p>A more open visual system built to scan fast, put the product first, and keep the conversion path clean.</p>
+            </div>
+          </article>
+
+          <article class="panel showcase-card reveal frame-trace-card" data-delay="90"
+            data-frame-trace="project-supporting">
+            <div class="page-media landscape-media">
+              <video autoplay muted loop playsinline preload="metadata" poster="media/projects/3d-sky-site.png">
+                <source src="media/projects/3d-sky-site.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">3D brand world • Interactive environment</p>
+              <h3>Playful worldbuilding, kept under control.</h3>
+              <p>A lighter visual mood with motion and personality that still feels structured instead of chaotic.</p>
+            </div>
+          </article>
+
+          <article class="panel page-copy-panel reveal frame-trace-card" data-delay="180"
+            data-frame-trace="project-supporting-note">
+            <p class="eyebrow">Editorial Rule</p>
+            <h3>Not every project needs equal weight.</h3>
+            <p>
+              The goal is a better impression, not a giant grid of everything. Strong work gets room.
+              Supporting work stays brief.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Systems / Automation</p>
+          <h2 data-title-reveal data-title-variant="double">Smaller systems still need finish.</h2>
+          <p class="section-support">
+            The visual layer changes. The clarity standard does not.
+          </p>
+        </div>
+
+        <div class="card-grid-2">
+          <article class="panel page-media-card reveal frame-trace-card" data-frame-trace="project-systems">
+            <div class="page-media landscape-media">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="media/projects/signal-bot.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Signal bot</p>
+              <h3>Fast output, cleaner delivery.</h3>
+              <p>Automation work that still benefits from sharper status design and simpler interaction points.</p>
+            </div>
+          </article>
+
+          <article class="panel page-media-card reveal frame-trace-card" data-delay="110"
+            data-frame-trace="project-systems">
+            <div class="page-media landscape-media">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="media/projects/crypto-futures-bot.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Futures automation</p>
+              <h3>Utility work, presented with intent.</h3>
+              <p>Smaller systems still need to feel legible, dependable, and worth trusting at a glance.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <article class="panel closing-panel reveal frame-trace-card" data-frame-trace="projects-cta">
+          <p class="eyebrow">Next Step</p>
+          <h2 data-title-reveal>If the next build needs stronger proof, start here.</h2>
+          <p>
+            Websites, product surfaces, and systems work best when the visual layer and the execution layer move together.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="contact.html">Start A Project</a>
+            <a class="button button-secondary" href="solutions.html">View Solutions</a>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+            <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
-          <p>Projects page built to lead with the strongest work and keep the rest properly secondary.</p>
-        </div>
-        <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="solutions.html">Solutions</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="footer-note">Selected work only</p>
         </div>
       </footer>
-    </div>
-  </body>
+    </main>
+  </div>
+</body>
+
 </html>

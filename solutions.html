@@ -1,29 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Huston Solutions: premium websites, digital systems, automation, and founder-led execution by Bryce Huston." />
-    <title>Bryce Huston | Solutions</title>
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="script.js"></script>
-  </head>
-  <body>
-    <div class="site-shell">
-      <div class="ambient ambient-one" aria-hidden="true"></div>
-      <div class="ambient ambient-two" aria-hidden="true"></div>
-      <div class="ambient ambient-three" aria-hidden="true"></div>
 
-      <header class="topbar">
-        <a class="brand" href="index.html">
-          <span class="brand-mark"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Huston Solutions by Bryce Huston: premium websites, automation, tech support, recovery, and dependable founder-led execution." />
+  <title>Bryce Huston | Solutions</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="homepage.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="script.js"></script>
+</head>
+
+<body class="interior-page solutions-page">
+  <div class="home-shell interior-shell">
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
+
+    <main class="interior-main">
+      <header class="hero-nav-bar">
+        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+          <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="nav" aria-label="Primary">
+        <nav class="hero-nav" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="projects.html">Projects</a>
@@ -31,178 +36,215 @@
           <a href="explore.html">Explore</a>
           <a href="contact.html">Contact</a>
         </nav>
-        <a class="button button-primary button-small topbar-cta" href="contact.html">Work With Me</a>
+        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
       </header>
 
-      <main class="page-shell">
-        <section class="page-hero compact">
-          <div class="page-copy reveal">
-            <p class="eyebrow">Solutions / Huston Solutions</p>
-            <h1>Services built with the same standard.</h1>
-            <p class="lead">
-              Huston Solutions handles the service side: websites, systems,
-              automation, and implementation with a cleaner founder-led feel.
+      <section class="page-hero-section">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy reveal">
+            <p class="hero-kicker">Huston Solutions</p>
+            <h1 data-title-reveal>Clear Help. Stronger Execution.</h1>
+            <p class="page-lead">
+              The service branch covers websites, automation, support, and recovery with the same emphasis on clarity,
+              trust, and follow-through.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Start a Project</a>
+              <a class="button button-primary" href="contact.html">Start A Project</a>
+              <a class="button button-secondary" href="projects.html">See The Work</a>
             </div>
           </div>
-          <div class="motion-surface reveal" data-delay="120">
-            <div class="floating-card floating-card-top">
-              <p class="meta-label">Service branch</p>
-              <strong>Clear offer, same standard</strong>
-              <p>Built to explain the service side without breaking the brand system around it.</p>
+
+          <div class="page-hero-aside reveal reveal-soft" data-delay="110">
+            <article class="panel metrics-panel frame-trace-card" data-frame-trace="solutions-hero">
+              <p class="eyebrow">Trust Snapshot</p>
+              <div class="rating-line">
+                <strong>5.0</strong>
+                <span>Google rating</span>
+              </div>
+              <div class="stat-chip-row">
+                <span class="page-chip">20 reviews</span>
+                <span class="page-chip">Vancouver, BC</span>
+                <span class="page-chip">Founder-led</span>
+              </div>
+              <p>
+                Friendly, direct service for people who want the work handled properly the first time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Service Lanes</p>
+          <h2 data-title-reveal>Two kinds of work. One standard.</h2>
+          <p class="section-support">
+            Premium web presence on one side. Dependable support on the other.
+          </p>
+        </div>
+
+        <div class="card-grid-4">
+          <article class="panel service-lane-card reveal frame-trace-card" data-frame-trace="solutions-lanes">
+            <p class="project-meta">Web build</p>
+            <h3>Premium websites</h3>
+            <p>Custom business sites, landing pages, lead capture, and cleaner digital presence for founders and teams.</p>
+          </article>
+          <article class="panel service-lane-card reveal frame-trace-card" data-delay="80"
+            data-frame-trace="solutions-lanes">
+            <p class="project-meta">Systems</p>
+            <h3>Automation + cleanup</h3>
+            <p>AI-assisted workflows, internal systems, and support tooling that reduce drag and keep work moving.</p>
+          </article>
+          <article class="panel service-lane-card reveal frame-trace-card" data-delay="160"
+            data-frame-trace="solutions-lanes">
+            <p class="project-meta">Support</p>
+            <h3>Senior-friendly tech help</h3>
+            <p>Patient device help, troubleshooting, setup, and guidance for seniors, families, and small local clients.</p>
+          </article>
+          <article class="panel service-lane-card reveal frame-trace-card" data-delay="240"
+            data-frame-trace="solutions-lanes">
+            <p class="project-meta">Protection</p>
+            <h3>Recovery + awareness</h3>
+            <p>Virus cleanup, recovery help, password and account support, and practical scam awareness when stakes are real.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="feature-layout">
+          <article class="panel page-copy-panel reveal frame-trace-card" data-frame-trace="solutions-fit">
+            <p class="eyebrow">Best Fit</p>
+            <h2 data-title-reveal>Good when trust matters as much as output.</h2>
+            <p>
+              Some projects need a stronger website. Some need someone dependable to solve a real tech problem.
+              Both benefit from direct communication, clear scope, and work that does not get sloppy under pressure.
+            </p>
+          </article>
+
+          <article class="panel page-copy-panel reveal frame-trace-card" data-delay="120" data-frame-trace="solutions-way">
+            <p class="eyebrow">Working Style</p>
+            <ul class="detail-list">
+              <li>Clear recommendations without padded jargon</li>
+              <li>Practical help for people who want patient support</li>
+              <li>Room to grow from one-off projects into longer-term help</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Google Reviews</p>
+          <h2 data-title-reveal data-title-variant="double">Real trust, styled properly.</h2>
+          <p class="section-support">
+            Using the review content without dragging in a widget.
+          </p>
+        </div>
+
+        <div class="review-grid-premium">
+          <article class="panel review-quote-card reveal frame-trace-card" data-frame-trace="solutions-reviews">
+            <div class="review-kicker-row">
+              <span class="page-chip">Ann Hughes</span>
+              <span class="review-stars">5 stars</span>
             </div>
-            <div class="hero-core">
-              <div class="hero-ring hero-ring-one"></div>
-              <div class="hero-ring hero-ring-two"></div>
-              <div class="hero-center-glow"></div>
+            <p class="review-quote">
+              Bryce got a laptop set up properly and explained the newer features in a way that actually felt usable.
+            </p>
+            <p class="review-attribution">Tech help with patience and clarity.</p>
+          </article>
+
+          <article class="panel review-quote-card reveal frame-trace-card" data-delay="90"
+            data-frame-trace="solutions-reviews">
+            <div class="review-kicker-row">
+              <span class="page-chip">Dee Davies</span>
+              <span class="review-stars">5 stars</span>
             </div>
-          </div>
-        </section>
+            <p class="review-quote">
+              Quick to reply, same-day help, and the repair felt both professional and reasonably priced.
+            </p>
+            <p class="review-attribution">Repair and support with dependable follow-through.</p>
+          </article>
 
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Service pillars</p>
-            <h2>Web, systems, automation, and support.</h2>
-          </div>
-          <div class="card-grid four">
-            <article class="section-card service-card reveal">
-              <p class="meta-label">Service</p>
-              <h3>Web Experiences</h3>
-              <p>Premium websites, landing pages, and front-end builds with stronger positioning and presentation.</p>
-            </article>
-            <article class="section-card service-card reveal" data-delay="80">
-              <p class="meta-label">Service</p>
-              <h3>AI + Automation</h3>
-              <p>Automations and support systems that remove drag and keep work moving.</p>
-            </article>
-            <article class="section-card service-card reveal" data-delay="160">
-              <p class="meta-label">Service</p>
-              <h3>Digital Systems</h3>
-              <p>Workflows, interfaces, and internal systems that stay clear as things scale.</p>
-            </article>
-            <article class="section-card service-card reveal" data-delay="240">
-              <p class="meta-label">Service</p>
-              <h3>Consulting</h3>
-              <p>Strategic direction, cleanup, and execution support when the work needs sharper decisions.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="list-grid two">
-            <article class="section-card reveal">
-              <p class="eyebrow">Who it is for</p>
-              <h2>Best for founders, operators, and teams that want fewer layers and better follow-through.</h2>
-              <p>Good fit usually means clear ambition, real stakes, and a desire to do the work properly.</p>
-            </article>
-            <article class="section-card reveal" data-delay="120">
-              <p class="eyebrow">Engagements</p>
-              <h2>Strategy, implementation, and support.</h2>
-              <p>Structure can flex, but the offer stays simple: clearer decisions, stronger build quality, better finish.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="section-card trust-bar reveal">
-            <div class="section-intro compact">
-              <p class="eyebrow">Why teams stay</p>
-              <h2>Clear communication, dependable follow-through, and better finish.</h2>
+          <article class="panel review-quote-card reveal frame-trace-card" data-delay="180"
+            data-frame-trace="solutions-reviews">
+            <div class="review-kicker-row">
+              <span class="page-chip">Zukhra Roziyeva</span>
+              <span class="review-stars">5 stars</span>
             </div>
-            <div class="trust-grid">
-              <article class="mini-panel">
-                <p class="meta-label">Working style</p>
-                <strong>Founder-led communication</strong>
-                <p>Fewer handoffs. Faster decisions. Less dilution between strategy and build.</p>
-              </article>
-              <article class="review-card">
-                <span class="pill">Clarity</span>
-                <p class="quote">Projects move faster when positioning, design, and implementation stay in the same conversation.</p>
-                <p class="review-meta">What the process should feel like</p>
-              </article>
-              <article class="review-card">
-                <span class="pill">Reliability</span>
-                <p class="quote">Deadlines, polish, and follow-through matter as much as the visual layer.</p>
-                <p class="review-meta">What clients come back for</p>
-              </article>
-            </div>
-          </div>
-        </section>
+            <p class="review-quote">
+              Prompt service, fast repair, and the kind of help people feel comfortable recommending to others.
+            </p>
+            <p class="review-attribution">High-trust service when the issue is time-sensitive.</p>
+          </article>
+        </div>
+      </section>
 
-        <section class="section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">Process</p>
-            <h2>A simple process that keeps momentum up.</h2>
-          </div>
-          <div class="timeline-grid">
-            <article class="section-card timeline-card reveal">
-              <strong>01 / Clarify</strong>
-              <p>Discovery, goals, scope, and what success should actually look like.</p>
-            </article>
-            <article class="section-card timeline-card reveal" data-delay="80">
-              <strong>02 / Build</strong>
-              <p>Design, systems, implementation, and refinement with tighter founder-level feedback.</p>
-            </article>
-            <article class="section-card timeline-card reveal" data-delay="160">
-              <strong>03 / Launch + support</strong>
-              <p>Delivery, handoff, iteration, and room for future expansion when it makes sense.</p>
-            </article>
-          </div>
-        </section>
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Process</p>
+          <h2 data-title-reveal>Simple, direct, and easy to move on.</h2>
+          <p class="section-support">
+            Good service should not feel overcomplicated.
+          </p>
+        </div>
 
-        <section class="section faq-section">
-          <div class="section-intro reveal">
-            <p class="eyebrow">FAQ</p>
-            <h2>Common questions, answered simply.</h2>
-          </div>
-          <div class="faq-list">
-            <details class="faq-item section-card reveal">
-              <summary>What kinds of projects fit best?</summary>
-              <p>Best fit usually means websites, systems, automation, or support work where clarity and finish both matter.</p>
-            </details>
-            <details class="faq-item section-card reveal" data-delay="80">
-              <summary>Can Huston Solutions plug into an existing team?</summary>
-              <p>Yes. The work can run founder-led end to end or slot into an existing team where that makes more sense.</p>
-            </details>
-            <details class="faq-item section-card reveal" data-delay="160">
-              <summary>Do you offer support after launch?</summary>
-              <p>Yes. Support, iteration, and follow-through can stay in place when the work benefits from it.</p>
-            </details>
-          </div>
-        </section>
+        <div class="card-grid-3 timeline-grid-premium">
+          <article class="panel timeline-panel reveal frame-trace-card" data-frame-trace="solutions-process">
+            <strong>01</strong>
+            <h3>Clarify the problem.</h3>
+            <p>What is broken, what needs to launch, what matters most, and what the timeline actually is.</p>
+          </article>
+          <article class="panel timeline-panel reveal frame-trace-card" data-delay="90"
+            data-frame-trace="solutions-process">
+            <strong>02</strong>
+            <h3>Handle the work.</h3>
+            <p>Build, support, recovery, or cleanup with less friction and clearer communication.</p>
+          </article>
+          <article class="panel timeline-panel reveal frame-trace-card" data-delay="180"
+            data-frame-trace="solutions-process">
+            <strong>03</strong>
+            <h3>Leave it in a better state.</h3>
+            <p>Delivery, handoff, follow-up support, or room for a broader next phase when the work earns it.</p>
+          </article>
+        </div>
+      </section>
 
-        <section class="section final-cta">
-          <div class="section-card closing-card reveal">
-            <p class="eyebrow">Start here</p>
-            <h2>If the work needs stronger execution and a cleaner standard, start here.</h2>
-            <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Start a Project</a>
-              <a class="button button-secondary" href="projects.html">View Projects</a>
-            </div>
+      <section class="content-section interior-section">
+        <article class="panel reserved-panel reveal frame-trace-card" data-frame-trace="solutions-reserved">
+          <p class="eyebrow">Planned Expansion</p>
+          <h2 data-title-reveal>Deeper package detail is being refined.</h2>
+          <p>
+            The brochure and review proof are strong enough for a clean V1. A fuller breakdown of packages,
+            support plans, and website engagement tiers should be the next upgrade here.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="contact.html">Start Here</a>
+            <a class="button button-secondary" href="mailto:hustonsolutions.inc@gmail.com">Email Directly</a>
           </div>
-        </section>
-      </main>
+        </article>
+      </section>
 
-      <footer class="footer">
-        <div>
-          <a class="brand footer-brand" href="index.html">
-            <span class="brand-mark"></span>
-            <span class="brand-lockup">
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+            <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
-          <p>Solutions page built to explain the offer clearly without losing the premium feel.</p>
-        </div>
-        <div class="footer-links">
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="footer-note">Huston Solutions</p>
         </div>
       </footer>
-    </div>
-  </body>
+    </main>
+  </div>
+</body>
+
 </html>

@@ -4,359 +4,209 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore travel, diving, wildlife, and the moments outside client work." />
+  <meta name="description" content="Explore travel, diving, wildlife, and a more personal side of Bryce Huston's world." />
   <title>Bryce Huston | Explore</title>
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="homepage.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
-
-  <style>
-    /* =========================================================
-         Explore page 3D carousel
-         Added inline so you do not need to touch styles.css yet
-      ========================================================= */
-
-    .explore-carousel-wrap {
-      padding: clamp(1rem, 2vw, 1.5rem);
-      overflow: hidden;
-    }
-
-    .explore-carousel-head {
-      max-width: 46rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .explore-carousel-head .lead {
-      margin-bottom: 0;
-    }
-
-    .explore-carousel-scene {
-      position: relative;
-      display: grid;
-      place-items: center;
-      min-height: clamp(24rem, 52vw, 38rem);
-      overflow: hidden;
-      border-radius: 1.75rem;
-      perspective: 58em;
-      background:
-        radial-gradient(circle at 50% 50%, rgba(129, 201, 255, 0.11), transparent 28%),
-        radial-gradient(circle at 50% 12%, rgba(255, 255, 255, 0.06), transparent 34%),
-        linear-gradient(180deg, rgba(255, 255, 255, 0.025), rgba(255, 255, 255, 0.01));
-      border: 1px solid rgba(255, 255, 255, 0.06);
-      box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.05),
-        0 20px 60px rgba(0, 0, 0, 0.28);
-      -webkit-mask: linear-gradient(90deg,
-          transparent 0%,
-          black 11%,
-          black 89%,
-          transparent 100%);
-      mask: linear-gradient(90deg,
-          transparent 0%,
-          black 11%,
-          black 89%,
-          transparent 100%);
-    }
-
-    .explore-carousel-scene::before {
-      content: "";
-      position: absolute;
-      inset: auto 10% 8% 10%;
-      height: 3.5rem;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(129, 201, 255, 0.16), transparent 70%);
-      filter: blur(20px);
-      pointer-events: none;
-    }
-
-    .explore-carousel-ring {
-      display: grid;
-      place-items: center;
-      transform-style: preserve-3d;
-      animation: explore-spin-y 38s linear infinite;
-      will-change: transform;
-    }
-
-    .explore-carousel-scene:hover .explore-carousel-ring {
-      animation-play-state: paused;
-    }
-
-    @keyframes explore-spin-y {
-      to {
-        transform: rotateY(360deg);
-      }
-    }
-
-    .explore-carousel-card {
-      /* Card size */
-      --w: clamp(10rem, 18vw, 15rem);
-      /* Base angle from number of cards */
-      --ba: calc(1turn / var(--n));
-
-      grid-area: 1 / 1;
-      width: var(--w);
-      aspect-ratio: 7 / 10;
-      object-fit: cover;
-      border-radius: 1.4rem;
-      backface-visibility: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow:
-        0 18px 32px rgba(0, 0, 0, 0.34),
-        0 6px 18px rgba(0, 0, 0, 0.2);
-
-      /* Important:
-           Rotate first, then move back in Z so the cards form a ring
-        */
-      transform:
-        rotateY(calc(var(--i) * var(--ba))) translateZ(calc(-1 * ((0.5 * var(--w) + 0.5rem) / tan(calc(0.5 * var(--ba))))));
-    }
-
-    @media (max-width: 900px) {
-      .explore-carousel-scene {
-        min-height: 22rem;
-        border-radius: 1.25rem;
-      }
-
-      .explore-carousel-card {
-        --w: clamp(8rem, 28vw, 11rem);
-        border-radius: 1rem;
-      }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      .explore-carousel-ring {
-        animation-duration: 120s;
-      }
-    }
-  </style>
 </head>
 
-<body>
-  <div class="site-shell">
-    <div class="ambient ambient-one" aria-hidden="true"></div>
-    <div class="ambient ambient-two" aria-hidden="true"></div>
-    <div class="ambient ambient-three" aria-hidden="true"></div>
+<body class="interior-page explore-page">
+  <div class="home-shell interior-shell">
+    <div class="page-glow page-glow-one" aria-hidden="true"></div>
+    <div class="page-glow page-glow-two" aria-hidden="true"></div>
 
-    <header class="topbar">
-      <a class="brand" href="index.html">
-        <span class="brand-mark"></span>
-        <span class="brand-lockup">
-          <strong>Bryce</strong>
-          <span>Huston</span>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="solutions.html">Solutions</a>
-        <a class="active" href="explore.html">Explore</a>
-        <a href="contact.html">Contact</a>
-      </nav>
-
-      <a class="button button-primary button-small topbar-cta" href="contact.html">
-        Work With Me
-      </a>
-    </header>
-
-    <main class="page-shell">
-      <section class="page-hero compact">
-        <div class="page-copy reveal">
-          <p class="eyebrow">Explore</p>
-          <h1>A quieter side of the brand.</h1>
-          <p class="lead">
-            Travel, diving, wildlife, and real moments that add texture to
-            the work without turning the site into a random feed.
-          </p>
-        </div>
-
-        <div class="motion-surface reveal" data-delay="120">
-          <div class="placeholder-media portrait has-image media-explore-hero" aria-label="Explore hero image"></div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-card reveal">
-          <p class="eyebrow">Categories</p>
-          <div class="category-row">
-            <span class="chip active">Travel</span>
-            <span class="chip">Diving</span>
-            <span class="chip">Adventure</span>
-            <span class="chip">Behind The Scenes</span>
-            <span class="chip">Life Moments</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Featured moments</p>
-          <h2>A few moments say more than a long feed.</h2>
-        </div>
-
-        <div class="card-grid three">
-          <article class="explore-tile section-card reveal">
-            <div class="placeholder-media tall has-image media-explore-ray" aria-label="Bryce with a stingray"></div>
-            <div class="card-body">
-              <p class="meta-label">Featured moment</p>
-              <h3>Wild moments beat generic filler.</h3>
-              <p>Some images already carry the whole memory on their own.</p>
-            </div>
-          </article>
-
-          <article class="explore-tile section-card reveal" data-delay="100">
-            <div class="placeholder-media tall has-image media-explore-tiger" aria-label="Bryce with a tiger"></div>
-            <div class="card-body">
-              <p class="meta-label">Featured moment</p>
-              <h3>The story should read in one glance.</h3>
-              <p>
-                When a moment has range, the page does not need to
-                over-explain it.
-              </p>
-            </div>
-          </article>
-
-          <article class="explore-tile section-card reveal" data-delay="200">
-            <div class="placeholder-media tall has-image media-explore-diving" aria-label="Bryce diving by the ocean">
-            </div>
-            <div class="card-body">
-              <p class="meta-label">Featured moment</p>
-              <h3>Perspective matters outside the screen too.</h3>
-              <p>The outside world should add range to the brand, not noise.</p>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- =========================================================
-             NEW SECTION
-             Placed after Featured moments so it sits lower on the page
-        ========================================================== -->
-      <section class="section">
-        <div class="section-card explore-carousel-wrap reveal">
-          <div class="explore-carousel-head">
-            <p class="eyebrow">Photo reel</p>
-            <h2>More life behind the work.</h2>
-            <p class="lead">
-              A rotating pass through real moments so the page feels curated,
-              alive, and personal without turning into a giant feed dump.
-            </p>
-          </div>
-
-          <div class="explore-carousel-scene" aria-label="Rotating photo carousel from Bryce's explore gallery">
-            <div class="explore-carousel-ring" style="--n: 14">
-              <img class="explore-carousel-card" src="images/photo1.jpg" alt="Explore photo 1" style="--i: 0" />
-              <img class="explore-carousel-card" src="images/photo2.jpg" alt="Explore photo 2" style="--i: 1" />
-              <img class="explore-carousel-card" src="images/photo3.jpg" alt="Explore photo 3" style="--i: 2" />
-              <img class="explore-carousel-card" src="images/photo4.jpg" alt="Explore photo 4" style="--i: 3" />
-              <img class="explore-carousel-card" src="images/photo5.jpg" alt="Explore photo 5" style="--i: 4" />
-              <img class="explore-carousel-card" src="images/photo6.jpg" alt="Explore photo 6" style="--i: 5" />
-              <img class="explore-carousel-card" src="images/photo7.jpg" alt="Explore photo 7" style="--i: 6" />
-              <img class="explore-carousel-card" src="images/photo8.jpg" alt="Explore photo 8" style="--i: 7" />
-              <img class="explore-carousel-card" src="images/photo9.jpg" alt="Explore photo 9" style="--i: 8" />
-              <img class="explore-carousel-card" src="images/photo10.jpg" alt="Explore photo 10" style="--i: 9" />
-              <img class="explore-carousel-card" src="images/photo11.jpg" alt="Explore photo 11" style="--i: 10" />
-              <img class="explore-carousel-card" src="images/photo12.jpg" alt="Explore photo 12" style="--i: 11" />
-              <img class="explore-carousel-card" src="images/photo13.jpg" alt="Explore photo 13" style="--i: 12" />
-              <img class="explore-carousel-card" src="images/photo14.jpg" alt="Explore photo 14" style="--i: 13" />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-intro reveal">
-          <p class="eyebrow">Gallery layout</p>
-          <h2>The gallery should feel curated, not crowded.</h2>
-        </div>
-
-        <div class="masonry-grid">
-          <article class="masonry-item section-card span-7 reveal">
-            <div class="placeholder-media landscape has-image media-explore-diving-wide" aria-label="Diving scene">
-            </div>
-            <div class="card-body">
-              <p class="meta-label">Travel</p>
-              <h3>Ocean time widens the frame.</h3>
-            </div>
-          </article>
-
-          <article class="masonry-item section-card span-5 reveal" data-delay="60">
-            <div class="placeholder-media tall has-image media-explore-tiger" aria-label="Tiger encounter"></div>
-            <div class="card-body">
-              <p class="meta-label">Adventure</p>
-              <h3>Adventure should still feel chosen.</h3>
-            </div>
-          </article>
-
-          <article class="masonry-item section-card span-4 reveal" data-delay="120">
-            <div class="placeholder-media video has-image media-explore-ray-wide" aria-label="String ray moment"></div>
-            <div class="card-body">
-              <p class="meta-label">Video</p>
-              <h3>Short moments, strong recall.</h3>
-            </div>
-          </article>
-
-          <article class="masonry-item section-card span-4 reveal" data-delay="180">
-            <div class="placeholder-media square has-image media-explore-ray" aria-label="String ray photo"></div>
-            <div class="card-body">
-              <p class="meta-label">Life moments</p>
-              <h3>Not every memory needs a long caption.</h3>
-            </div>
-          </article>
-
-          <article class="masonry-item section-card span-4 reveal" data-delay="240">
-            <div class="placeholder-media square has-image media-explore-diving" aria-label="Bryce by the ocean"></div>
-            <div class="card-body">
-              <p class="meta-label">Behind the scenes</p>
-              <h3>Life outside the client work still shapes the taste.</h3>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="section-card callout-grid reveal">
-          <div>
-            <p class="eyebrow">Reflection strip</p>
-            <h2>What feeds the work belongs in the mix.</h2>
-            <p>
-              Real experiences keep the brand from feeling flat,
-              over-designed, or overly online.
-            </p>
-          </div>
-
-          <div class="callout-actions">
-            <a class="button button-secondary" href="projects.html">
-              Back to Projects
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <span class="brand-mark"></span>
+    <main class="interior-main">
+      <header class="hero-nav-bar">
+        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+          <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <p>
-          Explore page built to add range and personality without losing
-          discipline.
-        </p>
-      </div>
+        <nav class="hero-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="solutions.html">Solutions</a>
+          <a class="active" href="explore.html">Explore</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
+      </header>
 
-      <div class="footer-links">
-        <a href="about.html">About</a>
-        <a href="projects.html">Projects</a>
-        <a href="solutions.html">Solutions</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </footer>
+      <section class="page-hero-section">
+        <div class="page-hero-grid">
+          <div class="page-hero-copy reveal">
+            <p class="hero-kicker">Explore</p>
+            <h1 data-title-reveal>Life Outside The Build.</h1>
+            <p class="page-lead">
+              Travel, diving, wildlife, and the moments that keep the brand personal without turning the site into a dump.
+            </p>
+          </div>
+
+          <div class="page-hero-aside reveal reveal-soft" data-delay="120">
+            <div class="dual-media-stack">
+              <article class="panel page-media-card frame-trace-card" data-frame-trace="explore-hero">
+                <div class="page-media portrait-media">
+                  <img src="media/explore/photo8.jpg" alt="Bryce Huston in diving gear by the ocean" loading="eager" />
+                </div>
+              </article>
+              <article class="panel page-media-card frame-trace-card" data-frame-trace="explore-hero">
+                <div class="page-media portrait-media">
+                  <img src="media/explore/photo11.jpg" alt="Bryce Huston beside a tiger" loading="lazy" />
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Featured Moments</p>
+          <h2 data-title-reveal>A few images can carry the whole memory.</h2>
+          <p class="section-support">
+            Curated, not crowded.
+          </p>
+        </div>
+
+        <div class="card-grid-3">
+          <article class="panel showcase-card reveal frame-trace-card" data-frame-trace="explore-featured">
+            <div class="page-media portrait-media">
+              <img src="media/explore/4-string-ray-photo.JPG" alt="Bryce Huston with a stingray" loading="lazy" />
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Wildlife</p>
+              <h3>Real moments beat filler.</h3>
+            </div>
+          </article>
+          <article class="panel showcase-card reveal frame-trace-card" data-delay="90" data-frame-trace="explore-featured">
+            <div class="page-media portrait-media">
+              <img src="media/explore/5tiger-man.JPG" alt="Bryce Huston interacting with a tiger" loading="lazy" />
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Adventure</p>
+              <h3>Good stories do not need long captions.</h3>
+            </div>
+          </article>
+          <article class="panel showcase-card reveal frame-trace-card" data-delay="180"
+            data-frame-trace="explore-featured">
+            <div class="page-media portrait-media">
+              <img src="media/explore/6diving-photo.jpg" alt="Bryce Huston in diving gear near the ocean"
+                loading="lazy" />
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Diving</p>
+              <h3>Perspective gets wider fast.</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <article class="panel photo-reel-panel reveal frame-trace-card" data-frame-trace="explore-reel">
+          <div class="section-header section-header-tight">
+            <p class="eyebrow">Photo Reel</p>
+            <h2 data-title-reveal data-title-variant="double">A rotating strip of real life.</h2>
+            <p class="section-support">
+              Built so the image set can be swapped later without rebuilding the section.
+            </p>
+          </div>
+
+          <div class="explore-carousel-scene" aria-label="Rotating explore image carousel">
+            <div class="explore-carousel-ring" style="--n: 10">
+              <img class="explore-carousel-card" src="media/explore/photo3.jpg" alt="Explore photo 1" style="--i: 0" />
+              <img class="explore-carousel-card" src="media/explore/photo4.jpg" alt="Explore photo 2" style="--i: 1" />
+              <img class="explore-carousel-card" src="media/explore/photo5.jpg" alt="Explore photo 3" style="--i: 2" />
+              <img class="explore-carousel-card" src="media/explore/photo6.jpg" alt="Explore photo 4" style="--i: 3" />
+              <img class="explore-carousel-card" src="media/explore/photo7.jpg" alt="Explore photo 5" style="--i: 4" />
+              <img class="explore-carousel-card" src="media/explore/photo8.jpg" alt="Explore photo 6" style="--i: 5" />
+              <img class="explore-carousel-card" src="media/explore/photo9.jpg" alt="Explore photo 7" style="--i: 6" />
+              <img class="explore-carousel-card" src="media/explore/photo10.jpg" alt="Explore photo 8" style="--i: 7" />
+              <img class="explore-carousel-card" src="media/explore/photo11.jpg" alt="Explore photo 9" style="--i: 8" />
+              <img class="explore-carousel-card" src="media/explore/photo12.jpg" alt="Explore photo 10" style="--i: 9" />
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="content-section interior-section">
+        <div class="section-header reveal reveal-soft">
+          <p class="eyebrow">Motion Fragments</p>
+          <h2 data-title-reveal>Some moments work better in motion.</h2>
+          <p class="section-support">
+            Short loops. No giant gallery dump.
+          </p>
+        </div>
+
+        <div class="card-grid-2">
+          <article class="panel page-media-card reveal frame-trace-card" data-frame-trace="explore-motion">
+            <div class="page-media landscape-media">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="media/explore/TensorPix-y2mate.is-School-of-Fish-Point-Peron-WA-9TD5ejERVv0-720p-1696087734.mp4"
+                  type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Underwater</p>
+              <h3>Quiet motion still carries atmosphere.</h3>
+            </div>
+          </article>
+
+          <article class="panel page-media-card reveal frame-trace-card" data-delay="110"
+            data-frame-trace="explore-motion">
+            <div class="page-media landscape-media">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="media/explore/y2mate.is-Deep-diving-Thresher-Shark-Malapascua-Philippines-mPCEQUX_PvU-360p-1696087452.mp4"
+                  type="video/mp4" />
+              </video>
+            </div>
+            <div class="page-panel-copy">
+              <p class="project-meta">Open water</p>
+              <h3>Better than turning the page into a blog.</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section interior-section">
+        <article class="panel closing-panel reveal frame-trace-card" data-frame-trace="explore-close">
+          <p class="eyebrow">Why It Belongs</p>
+          <h2 data-title-reveal>Range makes the brand feel earned.</h2>
+          <p>
+            The right life moments add dimension. They should support the brand world, not compete with it.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="about.html">Back To About</a>
+            <a class="button button-secondary" href="contact.html">Work With Me</a>
+          </div>
+        </article>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+            <span class="brand-lockup footer-lockup">
+              <strong>Bryce</strong>
+              <span>Huston</span>
+            </span>
+          </a>
+          <nav class="footer-nav" aria-label="Footer">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="solutions.html">Solutions</a>
+            <a href="explore.html">Explore</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <p class="footer-note">Curated personal side</p>
+        </div>
+      </footer>
+    </main>
   </div>
 </body>
 

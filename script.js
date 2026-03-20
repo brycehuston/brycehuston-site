@@ -1,4 +1,5 @@
 const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const heroNavBar = document.querySelector(".hero-nav-bar");
 const reveals = document.querySelectorAll(".reveal");
 const storyShell = document.querySelector(".storytelling-shell");
 const statsSection = document.querySelector("[data-stats-section]");
@@ -32,6 +33,60 @@ if (!prefersReducedMotion.matches) {
   reveals.forEach((element) => observer.observe(element));
 } else {
   reveals.forEach((element) => element.classList.add("is-visible"));
+}
+
+function initAutoHideNav() {
+  if (!heroNavBar) {
+    return;
+  }
+
+  let lastScrollY = window.scrollY;
+  let isHidden = false;
+  let ticking = false;
+
+  function applyNavState() {
+    const currentScrollY = window.scrollY;
+    const scrollDelta = currentScrollY - lastScrollY;
+    const nearTop = currentScrollY <= 24;
+    const compactViewport = window.matchMedia("(max-width: 900px)").matches;
+    const hideThreshold = compactViewport ? 10 : 14;
+    const showThreshold = compactViewport ? -8 : -12;
+
+    heroNavBar.classList.toggle("is-nav-elevated", currentScrollY > 8);
+
+    if (nearTop) {
+      isHidden = false;
+    } else if (scrollDelta >= hideThreshold) {
+      isHidden = true;
+    } else if (scrollDelta <= showThreshold) {
+      isHidden = false;
+    }
+
+    heroNavBar.classList.toggle("is-nav-hidden", isHidden);
+    lastScrollY = currentScrollY;
+    ticking = false;
+  }
+
+  function onScroll() {
+    if (ticking) {
+      return;
+    }
+
+    ticking = true;
+    window.requestAnimationFrame(applyNavState);
+  }
+
+  applyNavState();
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", applyNavState, { passive: true });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden) {
+      isHidden = false;
+      heroNavBar.classList.remove("is-nav-hidden");
+      lastScrollY = window.scrollY;
+      applyNavState();
+    }
+  });
 }
 
 function formatStatValue(value) {
@@ -494,9 +549,16 @@ function initTitleReveals() {
     return;
   }
 
-  const targets = Array.from(
-    document.querySelectorAll(".hero-copy h1, .stats-heading-block h2, .section-header h2, .story-panel-copy h2, .pathway-card h2, .final-cta-card h2")
-  );
+  const selectors = [
+    "[data-title-reveal]",
+    ".hero-copy h1",
+    ".stats-heading-block h2",
+    ".section-header h2",
+    ".story-panel-copy h2",
+    ".pathway-card h2",
+    ".final-cta-card h2",
+  ];
+  const targets = Array.from(new Set(Array.from(document.querySelectorAll(selectors.join(", ")))));
 
   if (!targets.length) {
     return;
@@ -514,15 +576,16 @@ function initTitleReveals() {
     force3D: true,
   };
 
-  const playTitleReveal = (lines, delay = 0) => {
+  const playTitleReveal = (lines, delay = 0, variant = "default") => {
     const timeline = gsap.timeline({ delay });
+    const isDouble = variant === "double";
 
     timeline.to(lines, {
-      yPercent: -4,
-      rotateX: 10,
-      z: 10,
+      yPercent: isDouble ? -8 : -4,
+      rotateX: isDouble ? 14 : 10,
+      z: isDouble ? 14 : 10,
       opacity: 1,
-      duration: 1.18,
+      duration: isDouble ? 1.28 : 1.18,
       stagger: 0.08,
       ease: "power2.inOut",
     });
@@ -549,21 +612,23 @@ function initTitleReveals() {
     }
 
     const isHeroTitle = title.matches(".hero-copy h1");
+    const variant = title.dataset.titleVariant || "default";
+    const start = title.dataset.titleStart || "top 76%";
     gsap.set(lines, titleFromState);
 
     if (isHeroTitle) {
       requestAnimationFrame(() => {
-        playTitleReveal(lines, 0.18);
+        playTitleReveal(lines, 0.18, variant);
       });
       return;
     }
 
     ScrollTrigger.create({
       trigger: title,
-      start: "top 70%",
+      start,
       once: true,
       onEnter: () => {
-        playTitleReveal(lines, 0.08);
+        playTitleReveal(lines, 0.08, variant);
       },
     });
   });
@@ -702,6 +767,7 @@ function initFrameTraceAccents() {
   });
 }
 
+initAutoHideNav();
 initStatsSection();
 initStorytelling();
 initCtaParticles();
