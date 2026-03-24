@@ -555,7 +555,6 @@ function initTitleReveals() {
     ".stats-heading-block h2",
     ".section-header h2",
     ".story-panel-copy h2",
-    ".pathway-card h2",
     ".final-cta-card h2",
   ];
   const targets = Array.from(new Set(Array.from(document.querySelectorAll(selectors.join(", ")))));
@@ -767,11 +766,115 @@ function initFrameTraceAccents() {
   });
 }
 
+function initPathwayReveal() {
+  const pathwayCard = document.querySelector("[data-pathway-reveal]");
+  if (!pathwayCard) {
+    return;
+  }
+
+  const settleImmediately = () => {
+    pathwayCard.classList.add(
+      "is-pathway-settled",
+      "is-pathway-support-ready",
+      "is-pathway-support-one-ready",
+      "is-pathway-support-two-ready",
+      "is-pathway-support-three-ready",
+      "is-pathway-button-ready"
+    );
+  };
+
+  if (prefersReducedMotion.matches) {
+    settleImmediately();
+    return;
+  }
+
+  let hasPlayed = false;
+  const timeouts = [];
+
+  const schedule = (delay, callback) => {
+    timeouts.push(window.setTimeout(callback, delay));
+  };
+
+  const playSequence = () => {
+    if (hasPlayed) {
+      return;
+    }
+
+    hasPlayed = true;
+
+    schedule(500, () => {
+      pathwayCard.classList.add("is-pathway-line-one-visible");
+    });
+
+    schedule(2300, () => {
+      pathwayCard.classList.add("is-pathway-line-two-visible");
+    });
+
+    schedule(5600, () => {
+      pathwayCard.classList.add("is-pathway-intro-clearing");
+    });
+
+    schedule(6950, () => {
+      pathwayCard.classList.add("is-pathway-settled");
+    });
+
+    schedule(9300, () => {
+      pathwayCard.classList.add("is-pathway-support-ready");
+    });
+
+    schedule(9300, () => {
+      pathwayCard.classList.add("is-pathway-support-one-ready");
+    });
+
+    schedule(11050, () => {
+      pathwayCard.classList.add("is-pathway-support-two-ready");
+    });
+
+    schedule(13550, () => {
+      pathwayCard.classList.add("is-pathway-support-three-ready");
+    });
+
+    schedule(15850, () => {
+      pathwayCard.classList.add("is-pathway-button-ready");
+    });
+  };
+
+  if (!("IntersectionObserver" in window)) {
+    playSequence();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting || hasPlayed) {
+          return;
+        }
+
+        playSequence();
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      threshold: 0.72,
+      rootMargin: "0px 0px -2% 0px",
+    }
+  );
+
+  observer.observe(pathwayCard);
+
+  window.addEventListener("pagehide", () => {
+    observer.disconnect();
+    timeouts.forEach((timeoutId) => window.clearTimeout(timeoutId));
+  });
+}
+
 initAutoHideNav();
 initStatsSection();
 initStorytelling();
 initCtaParticles();
 initFrameTraceAccents();
+initPathwayReveal();
 
 function bootTitleReveals() {
   const titleRevealReady = document.fonts?.ready ?? Promise.resolve();

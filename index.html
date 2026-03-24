@@ -7,7 +7,7 @@
   <meta name="description"
     content="Bryce Huston builds premium websites, sharper systems, and founder-led digital experiences." />
   <title>Bryce Huston | Home</title>
-  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="icon" type="image/png" href="media/favicon.png" />
   <link rel="stylesheet" href="homepage.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
@@ -30,7 +30,6 @@
     <main>
       <header class="hero-nav-bar">
         <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
-          <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
@@ -53,10 +52,10 @@
         <div class="hero-circuit-lines" aria-hidden="true"></div>
         <div class="hero-scan-line" aria-hidden="true"></div>
         <div class="hero-copy reveal">
-          <p class="hero-kicker">Websites, systems, execution.</p>
-          <h1>Beyond Horizons.</h1>
+          <p class="hero-kicker">Think. Act. Achieve.</p>
+          <h1>Built Higher.</h1>
           <p class="hero-support">
-            For founders and brands that want more signal, less noise.
+            Websites, systems, and digital execution built to a higher standard from the start.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="contact.html">Start A Project</a>
@@ -64,11 +63,20 @@
           </div>
         </div>
         <div class="hero-control-stack frame-trace-card" aria-label="Hero controls" data-frame-trace="scene-dock">
-          <span class="hero-control-label">Scene</span>
-          <button class="hero-control" id="btnNext" type="button">Shift</button>
-          <button class="hero-control active" id="swTrails" type="button" aria-pressed="true">Trails</button>
-          <button class="hero-control active" id="swGlow" type="button" aria-pressed="true">Glow</button>
-          <button class="hero-control hero-lock-toggle" id="swModeLock" type="button" aria-pressed="false">
+          <button class="hero-control hero-control-next" id="btnNext" type="button" aria-label="Change scene"
+            title="Change scene">
+            <span class="hero-control-glyph hero-control-glyph-next" aria-hidden="true"></span>
+          </button>
+          <button class="hero-control active" id="swTrails" type="button" aria-pressed="true"
+            aria-label="Toggle trails" title="Toggle trails">
+            <span class="hero-control-glyph hero-control-glyph-trails" aria-hidden="true"></span>
+          </button>
+          <button class="hero-control active" id="swGlow" type="button" aria-pressed="true"
+            aria-label="Toggle glow" title="Toggle glow">
+            <span class="hero-control-glyph hero-control-glyph-glow" aria-hidden="true"></span>
+          </button>
+          <button class="hero-control hero-lock-toggle" id="swModeLock" type="button" aria-pressed="false"
+            aria-label="Lock scene mode" title="Lock scene mode">
             <span class="hero-lock-icon" aria-hidden="true">
               <span class="hero-lock-shackle"></span>
               <span class="hero-lock-body"></span>
@@ -82,7 +90,7 @@
       <section class="stats-section premium-stats reveal reveal-soft" aria-label="Homepage stats" data-stats-section>
         <div class="stats-heading-block">
           <span class="accent-line" aria-hidden="true"></span>
-          <p class="eyebrow">Built On Trust</p>
+          <p class="eyebrow">Trust Earned</p>
           <h2>Experience</h2>
         </div>
         <article class="stats-card reveal reveal-soft frame-trace-card" data-stat-card data-frame-trace="stats">
@@ -90,7 +98,7 @@
           <div class="stats-value-wrap" aria-hidden="true">
             <span class="stats-value" data-value="7" data-suffix="+">7+</span>
           </div>
-          <p class="stats-label">Years Building Trust</p>
+          <p class="stats-label">Years Solving Problems</p>
         </article>
         <article class="stats-card reveal reveal-soft frame-trace-card" data-delay="90" data-stat-card
           data-frame-trace="stats">
@@ -98,7 +106,7 @@
           <div class="stats-value-wrap" aria-hidden="true">
             <span class="stats-value" data-value="10" data-suffix="+">10+</span>
           </div>
-          <p class="stats-label">Years in Tech</p>
+          <p class="stats-label">Years Serving Clients</p>
         </article>
         <article class="stats-card reveal reveal-soft frame-trace-card" data-delay="180" data-stat-card
           data-frame-trace="stats">
@@ -106,16 +114,13 @@
           <div class="stats-value-wrap" aria-hidden="true">
             <span class="stats-value" data-value="20" data-suffix="+">20+</span>
           </div>
-          <p class="stats-label">Satisfied Clients</p>
+          <p class="stats-label">5-Star Reviews</p>
         </article>
       </section>
 
       <section class="storytelling-shell" aria-label="Homepage story">
         <div class="story-stage">
           <article class="story-panel story-panel-intro panel frame-trace-card" data-frame-trace="story">
-            <div class="story-ambient-fx story-ambient-fx-soft" aria-hidden="true">
-              <canvas class="story-ambient-canvas" data-ambient-level="soft"></canvas>
-            </div>
             <div class="story-panel-copy">
               <p class="eyebrow">What I Do</p>
               <h2>Digital Work That Lands Fast.</h2>
@@ -169,15 +174,12 @@
           </article>
 
           <article class="story-panel story-panel-services panel frame-trace-card" data-frame-trace="story">
-            <div class="story-ambient-fx story-ambient-fx-mid" aria-hidden="true">
-              <canvas class="story-ambient-canvas" data-ambient-level="mid"></canvas>
-            </div>
             <div class="story-panel-copy">
-              <p class="eyebrow">Services</p>
-              <h2>What I Build.</h2>
+              <p class="eyebrow">Expertise</p>
+              <h2>Systems Built With Intention.</h2>
               <span class="accent-line story-title-line" aria-hidden="true"></span>
               <p class="story-support">
-                A focused set of capabilities.
+                From websites to automation, every piece is designed to move with purpose.
               </p>
             </div>
             <div class="story-service-list" aria-label="Services">
@@ -205,9 +207,9 @@
         <div id="projects-particle-stage" aria-hidden="true"></div>
         <div class="section-header reveal reveal-soft">
           <p class="eyebrow">Featured Projects</p>
-          <h2>Selected Work.</h2>
+          <h2>Built To Stand Out.</h2>
           <p class="section-support">
-            A few projects that show the bar.
+            Projects designed to hold attention and move people to act.
           </p>
         </div>
         <div class="showcase-layout">
@@ -260,17 +262,32 @@
       </section>
 
       <section class="content-section pathway-section">
-        <div class="panel pathway-card reveal reveal-soft frame-trace-card" data-frame-trace="pathway">
-          <div>
-            <p class="eyebrow">HUSTON SOLUTIONS</p>
-            <span class="accent-line" aria-hidden="true"></span>
-            <h2>No Guesswork. <span class="pathway-title-break">Just Solutions.</span></h2>
-            <p>
-              One service for strategy, systems, and execution.
-            </p>
-          </div>
-          <div class="pathway-action">
-            <a class="button button-primary" href="solutions.html">Explore Solutions</a>
+        <div class="panel pathway-card reveal reveal-soft frame-trace-card" data-frame-trace="pathway"
+          data-pathway-reveal>
+          <div class="pathway-cinematic-stage">
+            <div class="pathway-content-shell">
+              <div class="pathway-main-content">
+                <div class="pathway-stage-center">
+                  <div class="pathway-intro-sequence" aria-hidden="true">
+                    <span class="pathway-intro-line pathway-intro-line-one">No Problem,</span>
+                    <span class="pathway-intro-line pathway-intro-line-two">Just Solutions.</span>
+                  </div>
+                  <div class="pathway-settled">
+                    <h2 class="pathway-settled-title">HUSTON SOLUTIONS</h2>
+                    <div class="pathway-settled-detail">
+                      <p class="pathway-settled-support">
+                        <span class="pathway-support-token pathway-support-token-one">Friendly,</span>
+                        <span class="pathway-support-token pathway-support-token-two">Patient</span>
+                        <span class="pathway-support-token pathway-support-token-three">Tech Help You Can Trust.</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="pathway-action">
+                <a class="button button-primary" href="solutions.html">GET HELP</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -278,9 +295,9 @@
       <section class="content-section explore-section">
         <div class="section-header reveal reveal-soft">
           <p class="eyebrow">Explore</p>
-          <h2>Outside the client work.</h2>
+          <h2>Beyond The Work.</h2>
           <p class="section-support">
-            Motion, travel, and perspective in a quieter register.
+            A more personal side of the creative process.
           </p>
         </div>
         <div class="explore-grid">
@@ -324,9 +341,9 @@
         </div>
         <div class="section-header reveal reveal-soft">
           <p class="eyebrow">FAQ</p>
-          <h2>Questions.</h2>
+          <h2>What To Expect.</h2>
           <p class="section-support">
-            Short, direct answers.
+            Straight answers on fit, process, and how I work.
           </p>
         </div>
         <div class="faq-list">
@@ -366,10 +383,10 @@
             <span class="cta-core-glow"></span>
           </div>
           <span class="accent-line accent-line-center" aria-hidden="true"></span>
-          <p class="eyebrow">Start A Project</p>
-          <h2>If standards matter, let’s talk.</h2>
+          <p class="eyebrow">Let’s Build</p>
+          <h2>For Brands That Expect More.</h2>
           <p>
-            Websites, systems, and execution with clarity from day one.
+            Clear strategy, strong execution, and digital work that holds up.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href="contact.html">Start A Project</a>
@@ -410,6 +427,7 @@
     const swModeLock = document.getElementById("swModeLock");
     const swTrails = document.getElementById("swTrails");
     const swGlow = document.getElementById("swGlow");
+    const controlDock = btnNext?.closest(".hero-control-stack");
 
     if (stage && btnNext && swModeLock && swTrails && swGlow) {
       const isMobile = matchMedia("(max-width: 720px)").matches;
@@ -424,6 +442,23 @@
       let modeLocked = false;
       let trailsOn = true;
       let glowOn = true;
+      const scenePalettes = [
+        {
+          accent: "rgba(118, 230, 255, 0.94)",
+          soft: "rgba(80, 194, 228, 0.26)",
+          glow: "rgba(96, 214, 244, 0.16)"
+        },
+        {
+          accent: "rgba(132, 170, 255, 0.94)",
+          soft: "rgba(96, 126, 226, 0.26)",
+          glow: "rgba(114, 138, 248, 0.16)"
+        },
+        {
+          accent: "rgba(150, 232, 255, 0.94)",
+          soft: "rgba(92, 176, 214, 0.24)",
+          glow: "rgba(104, 196, 232, 0.15)"
+        }
+      ];
 
       const CORE_Y = -40;
 
@@ -686,6 +721,7 @@
       function startMorph(nextIndex) {
         if (morphing) return;
         modeIndex = nextIndex;
+        syncSceneControlPalette();
         fromPos = new Float32Array(positions);
         toPos = new Float32Array(positions.length);
         const gen = generators[modeIndex];
@@ -708,6 +744,15 @@
       function setControlState(el, on) {
         el.classList.toggle("active", !!on);
         el.setAttribute("aria-pressed", on ? "true" : "false");
+      }
+
+      function syncSceneControlPalette() {
+        if (!controlDock) return;
+        const palette = scenePalettes[modeIndex] || scenePalettes[0];
+        controlDock.style.setProperty("--scene-control-accent", palette.accent);
+        controlDock.style.setProperty("--scene-control-accent-soft", palette.soft);
+        controlDock.style.setProperty("--scene-control-glow", palette.glow);
+        controlDock.dataset.sceneMode = MODE_NAMES[modeIndex].toLowerCase();
       }
 
       function pulseControl(el) {
@@ -759,6 +804,7 @@
       setControlState(swTrails, trailsOn);
       setControlState(swGlow, glowOn);
       syncModeLockControl();
+      syncSceneControlPalette();
 
       let t = 0;
 
@@ -813,7 +859,10 @@
             positions[i] = fromPos[i] * (1 - eased) + toPos[i] * eased;
           }
           geo.getAttribute("position").needsUpdate = true;
-          if (morphT >= 1) morphing = false;
+          if (morphT >= 1) {
+            morphing = false;
+            syncSceneControlPalette();
+          }
         }
 
         if (!modeLocked && !morphing && document.visibilityState === "visible" && now >= nextAutoSwitchAt) {
@@ -1091,301 +1140,6 @@
       Original beehive branching effect, properly adapted
    ========================================================= */
 
-    function initStoryAmbientCompanions() {
-      const canvases = Array.from(document.querySelectorAll('.story-ambient-canvas:not(#why-works-full-canvas)'));
-      if (!canvases.length) return;
-
-      const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      const isSmallScreen = window.matchMedia("(max-width: 900px)").matches;
-
-      canvases.forEach((canvas) => {
-        const host = canvas.parentElement;
-        const panel = canvas.closest(".story-panel");
-        const ctx = canvas.getContext("2d", { alpha: true });
-        const level = canvas.dataset.ambientLevel || "soft";
-
-        if (!host || !panel || !ctx) return;
-
-        const profile =
-          level === "mid"
-            ? {
-              len: isSmallScreen ? 15 : 17,
-              count: reduceMotion ? 10 : (isSmallScreen ? 16 : 24),
-              baseTime: 16,
-              addedTime: 18,
-              dieChance: 0.06,
-              spawnChance: reduceMotion ? 0.3 : 0.78,
-              sparkChance: reduceMotion ? 0.012 : 0.024,
-              sparkDist: 6,
-              sparkSize: 1.2,
-              baseHue: 202,
-              hueChange: 0.028,
-              baseLight: 38,
-              addedLight: 7,
-              baseAlpha: isSmallScreen ? 0.08 : 0.1,
-              repaintAlpha: reduceMotion ? 0.18 : 0.11,
-              atmosphereRadius: 0.22,
-              startX: 0.76,
-              startY: 0.34,
-              targetMinX: 0.62,
-              targetMaxX: 0.84,
-              targetMinY: 0.2,
-              targetMaxY: 0.54,
-              dieWidth: 0.24,
-              dieHeight: 0.24
-            }
-            : {
-              len: isSmallScreen ? 14 : 16,
-              count: reduceMotion ? 8 : (isSmallScreen ? 12 : 18),
-              baseTime: 18,
-              addedTime: 20,
-              dieChance: 0.07,
-              spawnChance: reduceMotion ? 0.24 : 0.62,
-              sparkChance: reduceMotion ? 0.008 : 0.018,
-              sparkDist: 5,
-              sparkSize: 1.05,
-              baseHue: 190,
-              hueChange: 0.022,
-              baseLight: 42,
-              addedLight: 5,
-              baseAlpha: isSmallScreen ? 0.06 : 0.08,
-              repaintAlpha: reduceMotion ? 0.2 : 0.13,
-              atmosphereRadius: 0.18,
-              startX: 0.8,
-              startY: 0.28,
-              targetMinX: 0.68,
-              targetMaxX: 0.88,
-              targetMinY: 0.18,
-              targetMaxY: 0.44,
-              dieWidth: 0.18,
-              dieHeight: 0.18
-            };
-
-        let w = 1;
-        let h = 1;
-        let dpr = 1;
-        let tick = 0;
-        let lines = [];
-        let rafId = 0;
-        let running = false;
-        let resizeObserver = null;
-        let intersectionObserver = null;
-        let dieX = 0;
-        let dieY = 0;
-        let anchorX = 0;
-        let anchorY = 0;
-        let targetX = 0;
-        let targetY = 0;
-
-        const baseRad = Math.PI * 2 / 6;
-
-        function rand(min, max) {
-          return min + Math.random() * (max - min);
-        }
-
-        function sizeCanvas() {
-          const rect = host.getBoundingClientRect();
-
-          w = Math.max(1, Math.floor(rect.width));
-          h = Math.max(1, Math.floor(rect.height));
-          dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-          canvas.width = Math.max(1, Math.floor(w * dpr));
-          canvas.height = Math.max(1, Math.floor(h * dpr));
-          canvas.style.width = `${w}px`;
-          canvas.style.height = `${h}px`;
-
-          ctx.setTransform(1, 0, 0, 1, 0, 0);
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-          anchorX = w * profile.startX;
-          anchorY = h * profile.startY;
-          targetX = anchorX;
-          targetY = anchorY;
-          dieX = (w * profile.dieWidth) / profile.len;
-          dieY = (h * profile.dieHeight) / profile.len;
-          lines = [];
-        }
-
-        function chooseNewTarget() {
-          const dx = targetX - anchorX;
-          const dy = targetY - anchorY;
-          if (Math.hypot(dx, dy) < 8) {
-            targetX = rand(w * profile.targetMinX, w * profile.targetMaxX);
-            targetY = rand(h * profile.targetMinY, h * profile.targetMaxY);
-          }
-        }
-
-        function updateAnchor() {
-          chooseNewTarget();
-          anchorX += (targetX - anchorX) * (reduceMotion ? 0.0005 : 0.0012);
-          anchorY += (targetY - anchorY) * (reduceMotion ? 0.0005 : 0.0012);
-        }
-
-        function Line() {
-          this.reset();
-        }
-
-        Line.prototype.reset = function () {
-          this.x = 0;
-          this.y = 0;
-          this.rad = baseRad * Math.floor(Math.random() * 6);
-          this.addedX = Math.cos(this.rad);
-          this.addedY = Math.sin(this.rad);
-          this.time = 0;
-          this.cumulativeTime = 0;
-          this.targetTime = (profile.baseTime + profile.addedTime * Math.random()) | 0;
-        };
-
-        Line.prototype.beginPhase = function () {
-          this.x += this.addedX;
-          this.y += this.addedY;
-          this.time = 0;
-          this.targetTime = (profile.baseTime + profile.addedTime * Math.random()) | 0;
-          this.rad += baseRad * (Math.random() < 0.5 ? 1 : -1);
-          this.addedX = Math.cos(this.rad);
-          this.addedY = Math.sin(this.rad);
-
-          if (
-            Math.random() < profile.dieChance ||
-            this.x > dieX ||
-            this.x < -dieX ||
-            this.y > dieY ||
-            this.y < -dieY
-          ) {
-            this.reset();
-          }
-        };
-
-        Line.prototype.step = function () {
-          ++this.time;
-          ++this.cumulativeTime;
-
-          if (this.time >= this.targetTime) {
-            this.beginPhase();
-          }
-
-          const prop = this.time / this.targetTime;
-          const wave = Math.sin((prop * Math.PI) / 2);
-          const drawX = anchorX + (this.x + this.addedX * wave) * profile.len;
-          const drawY = anchorY + (this.y + this.addedY * wave) * profile.len;
-          const light = profile.baseLight + profile.addedLight * Math.sin(this.cumulativeTime * 0.012);
-          const alpha = profile.baseAlpha + 0.026 * Math.sin(this.cumulativeTime * 0.018);
-          const hue = profile.baseHue + tick * profile.hueChange;
-
-          ctx.shadowBlur = 0;
-          ctx.fillStyle = `hsla(${hue.toFixed(2)}, 82%, ${light.toFixed(2)}%, ${Math.max(0.03, alpha).toFixed(3)})`;
-          ctx.fillRect(drawX, drawY, 1.5, 1.5);
-
-          if (Math.random() < profile.sparkChance) {
-            ctx.fillRect(
-              drawX + Math.random() * profile.sparkDist * (Math.random() < 0.5 ? 1 : -1),
-              drawY + Math.random() * profile.sparkDist * (Math.random() < 0.5 ? 1 : -1),
-              profile.sparkSize,
-              profile.sparkSize
-            );
-          }
-        };
-
-        function fadePreviousFrame() {
-          ctx.globalCompositeOperation = "destination-out";
-          ctx.fillStyle = `rgba(0, 0, 0, ${profile.repaintAlpha})`;
-          ctx.fillRect(0, 0, w, h);
-        }
-
-        function drawAtmosphere() {
-          const grad = ctx.createRadialGradient(
-            anchorX,
-            anchorY,
-            0,
-            anchorX,
-            anchorY,
-            Math.max(w, h) * profile.atmosphereRadius
-          );
-
-          grad.addColorStop(0, "rgba(78, 162, 232, 0.022)");
-          grad.addColorStop(0.36, "rgba(34, 84, 162, 0.012)");
-          grad.addColorStop(1, "rgba(0, 0, 0, 0)");
-
-          ctx.globalCompositeOperation = "source-over";
-          ctx.fillStyle = grad;
-          ctx.fillRect(0, 0, w, h);
-        }
-
-        function render() {
-          if (!running) return;
-
-          rafId = requestAnimationFrame(render);
-          ++tick;
-
-          fadePreviousFrame();
-          updateAnchor();
-          drawAtmosphere();
-
-          ctx.globalCompositeOperation = "lighter";
-
-          if (lines.length < profile.count && Math.random() < profile.spawnChance) {
-            lines.push(new Line());
-          }
-
-          lines.forEach((line) => line.step());
-        }
-
-        function start() {
-          if (running) return;
-          running = true;
-          render();
-        }
-
-        function stop() {
-          running = false;
-          if (rafId) {
-            cancelAnimationFrame(rafId);
-            rafId = 0;
-          }
-        }
-
-        sizeCanvas();
-
-        if ("ResizeObserver" in window) {
-          resizeObserver = new ResizeObserver(() => {
-            sizeCanvas();
-          });
-          resizeObserver.observe(host);
-        } else {
-          window.addEventListener("resize", sizeCanvas);
-        }
-
-        if ("IntersectionObserver" in window) {
-          intersectionObserver = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                if (entry.isIntersecting && document.visibilityState === "visible") {
-                  start();
-                } else {
-                  stop();
-                }
-              });
-            },
-            { threshold: 0.18 }
-          );
-
-          intersectionObserver.observe(panel);
-        } else {
-          start();
-        }
-
-        document.addEventListener("visibilitychange", () => {
-          if (document.hidden) {
-            stop();
-          } else if (panel.getBoundingClientRect().bottom > 0) {
-            start();
-          }
-        });
-      });
-    }
-
     function initWhyWorksFullFx() {
       const canvas = document.getElementById("why-works-full-canvas");
       if (!canvas) return;
@@ -1412,7 +1166,7 @@
       const opts = {
         /* Original structure, only tuned */
         len: isSmallScreen ? 18 : 21,
-        count: reduceMotion ? 24 : (isSmallScreen ? 42 : 60),
+        count: reduceMotion ? 24 : (isSmallScreen ? 48 : 68),
         baseTime: reduceMotion ? 16 : 13,
         addedTime: reduceMotion ? 16 : 13,
         dieChance: 0.05,
@@ -1427,7 +1181,7 @@
         hueChange: 0.042,
         baseLight: 40,
         addedLight: 11,
-        baseAlpha: isSmallScreen ? 0.18 : 0.22,
+        baseAlpha: isSmallScreen ? 0.2 : 0.25,
 
         shadowToTimePropMult: 3.2,
         baseLightInputMultiplier: 0.006,
@@ -1435,7 +1189,7 @@
 
         /* IMPORTANT:
            use destination-out fade so the real card background stays visible */
-        repaintAlpha: reduceMotion ? 0.13 : 0.055,
+        repaintAlpha: reduceMotion ? 0.12 : 0.048,
 
         cx: 0,
         cy: 0
@@ -1692,7 +1446,6 @@
       });
     }
 
-    initStoryAmbientCompanions();
     initWhyWorksFullFx();
   </script>
 </body>
