@@ -36,10 +36,9 @@
           </span>
         </a>
         <nav class="hero-nav" aria-label="Primary">
-          <a class="active" href="index.html">Home</a>
           <a href="about.html">About</a>
           <a href="projects.html">Projects</a>
-          <a href="solutions.html">Solutions</a>
+          <a href="solutions.html">SOLUTIONS</a>
           <a href="explore.html">Explore</a>
           <a href="contact.html">Contact</a>
         </nav>
@@ -52,7 +51,7 @@
         <div class="hero-circuit-lines" aria-hidden="true"></div>
         <div class="hero-scan-line" aria-hidden="true"></div>
         <div class="hero-copy reveal">
-          <p class="hero-kicker">Think. Act. Achieve.</p>
+          <p class="hero-kicker">Think. Create. Achieve.</p>
           <h1>Built Higher.</h1>
           <p class="hero-support">
             Websites, systems, and digital execution built to a higher standard from the start.
@@ -265,6 +264,12 @@
         <div class="panel pathway-card reveal reveal-soft frame-trace-card" data-frame-trace="pathway"
           data-pathway-reveal>
           <div class="pathway-cinematic-stage">
+            <div class="pathway-ambient-fx" aria-hidden="true">
+              <canvas class="pathway-ambient-canvas pathway-ambient-canvas-top" id="pathway-ambient-canvas-top"></canvas>
+              <canvas class="pathway-ambient-canvas pathway-ambient-canvas-right" id="pathway-ambient-canvas-right"></canvas>
+              <canvas class="pathway-ambient-canvas pathway-ambient-canvas-bottom" id="pathway-ambient-canvas-bottom"></canvas>
+              <canvas class="pathway-ambient-canvas pathway-ambient-canvas-left" id="pathway-ambient-canvas-left"></canvas>
+            </div>
             <div class="pathway-content-shell">
               <div class="pathway-main-content">
                 <div class="pathway-stage-center">
@@ -404,10 +409,9 @@
             </span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="projects.html">Projects</a>
-            <a href="solutions.html">Solutions</a>
+            <a href="solutions.html">SOLUTIONS</a>
             <a href="explore.html">Explore</a>
             <a href="contact.html">Contact</a>
           </nav>
@@ -1140,12 +1144,12 @@
       Original beehive branching effect, properly adapted
    ========================================================= */
 
-    function initWhyWorksFullFx() {
-      const canvas = document.getElementById("why-works-full-canvas");
+    function initBranchMeshFx(config) {
+      const canvas = document.getElementById(config.canvasId);
       if (!canvas) return;
 
       const host = canvas.parentElement;
-      const panel = canvas.closest(".why-works-panel");
+      const panel = canvas.closest(config.panelSelector);
       const ctx = canvas.getContext("2d", { alpha: true });
 
       if (!host || !panel || !ctx) return;
@@ -1164,41 +1168,33 @@
       let intersectionObserver = null;
 
       const opts = {
-        /* Original structure, only tuned */
-        len: isSmallScreen ? 18 : 21,
-        count: reduceMotion ? 24 : (isSmallScreen ? 48 : 68),
-        baseTime: reduceMotion ? 16 : 13,
-        addedTime: reduceMotion ? 16 : 13,
-        dieChance: 0.05,
-        spawnChance: reduceMotion ? 0.45 : 1,
-        sparkChance: reduceMotion ? 0.03 : 0.08,
-        sparkDist: 9,
-        sparkSize: 1.7,
-
-        /* darker blue version of original color behavior */
-        color: "hsla(hue, 85%, light%, alpha)",
-        baseHue: 214,
-        hueChange: 0.042,
-        baseLight: 40,
-        addedLight: 11,
-        baseAlpha: isSmallScreen ? 0.2 : 0.25,
-
-        shadowToTimePropMult: 3.2,
-        baseLightInputMultiplier: 0.006,
-        addedLightInputMultiplier: 0.012,
-
-        /* IMPORTANT:
-           use destination-out fade so the real card background stays visible */
-        repaintAlpha: reduceMotion ? 0.12 : 0.048,
-
+        len: isSmallScreen ? config.smallLen : config.len,
+        count: reduceMotion ? config.reducedCount : (isSmallScreen ? config.smallCount : config.count),
+        baseTime: reduceMotion ? config.reducedBaseTime : config.baseTime,
+        addedTime: reduceMotion ? config.reducedAddedTime : config.addedTime,
+        dieChance: config.dieChance,
+        spawnChance: reduceMotion ? config.reducedSpawnChance : config.spawnChance,
+        sparkChance: reduceMotion ? config.reducedSparkChance : config.sparkChance,
+        sparkDist: config.sparkDist,
+        sparkSize: config.sparkSize,
+        baseHue: config.baseHue,
+        hueChange: config.hueChange,
+        hueJitter: config.hueJitter,
+        baseSaturation: config.baseSaturation,
+        addedSaturation: config.addedSaturation,
+        baseLight: config.baseLight,
+        addedLight: config.addedLight,
+        baseAlpha: isSmallScreen ? config.smallBaseAlpha : config.baseAlpha,
+        shadowToTimePropMult: config.shadowToTimePropMult,
+        baseLightInputMultiplier: config.baseLightInputMultiplier,
+        addedLightInputMultiplier: config.addedLightInputMultiplier,
+        repaintAlpha: reduceMotion ? config.reducedRepaintAlpha : config.repaintAlpha,
         cx: 0,
         cy: 0
       };
 
       let dieX = 0;
       let dieY = 0;
-
-      /* slow creeping center shift */
       let anchorX = 0;
       let anchorY = 0;
       let targetX = 0;
@@ -1226,19 +1222,16 @@
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-        /* start left-ish so it creeps inward */
-        anchorX = w * 0.34;
-        anchorY = h * 0.44;
-
-        targetX = w * 0.64;
-        targetY = h * 0.50;
+        anchorX = w * config.startX;
+        anchorY = h * config.startY;
+        targetX = w * config.targetStartX;
+        targetY = h * config.targetStartY;
 
         opts.cx = anchorX;
         opts.cy = anchorY;
 
-        /* same original idea, but based on card area */
-        dieX = (w * 0.48) / opts.len;
-        dieY = (h * 0.38) / opts.len;
+        dieX = (w * config.dieScaleX) / opts.len;
+        dieY = (h * config.dieScaleY) / opts.len;
 
         lines = [];
       }
@@ -1248,18 +1241,17 @@
         const dy = targetY - anchorY;
         const dist = Math.hypot(dx, dy);
 
-        /* no jumps, only choose a new nearby destination when it arrives */
         if (dist < 10) {
-          targetX = rand(w * 0.32, w * 0.72);
-          targetY = rand(h * 0.3, h * 0.64);
+          targetX = rand(w * config.targetMinX, w * config.targetMaxX);
+          targetY = rand(h * config.targetMinY, h * config.targetMaxY);
         }
       }
 
       function updateAnchor() {
         chooseNewTarget();
 
-        anchorX += (targetX - anchorX) * (reduceMotion ? 0.0008 : 0.0019);
-        anchorY += (targetY - anchorY) * (reduceMotion ? 0.0008 : 0.0019);
+        anchorX += (targetX - anchorX) * (reduceMotion ? config.reducedAnchorLerp : config.anchorLerp);
+        anchorY += (targetY - anchorY) * (reduceMotion ? config.reducedAnchorLerp : config.anchorLerp);
 
         opts.cx = anchorX;
         opts.cy = anchorY;
@@ -1275,11 +1267,9 @@
         this.addedX = 0;
         this.addedY = 0;
         this.rad = 0;
-
         this.lightInputMultiplier =
           opts.baseLightInputMultiplier +
           opts.addedLightInputMultiplier * Math.random();
-
         this.cumulativeTime = 0;
         this.beginPhase();
       };
@@ -1319,11 +1309,13 @@
         const x = this.addedX * wave;
         const y = this.addedY * wave;
 
-        const hue = opts.baseHue + tick * opts.hueChange;
+        const hue = opts.baseHue + tick * opts.hueChange + Math.sin(this.cumulativeTime * 0.015) * opts.hueJitter;
+        const saturation =
+          opts.baseSaturation +
+          opts.addedSaturation * Math.sin(this.cumulativeTime * this.lightInputMultiplier * 0.72);
         const light =
           opts.baseLight +
           opts.addedLight * Math.sin(this.cumulativeTime * this.lightInputMultiplier);
-
         const alpha =
           opts.baseAlpha +
           0.055 * Math.sin(this.cumulativeTime * this.lightInputMultiplier);
@@ -1332,7 +1324,7 @@
         const drawY = opts.cy + (this.y + y) * opts.len;
 
         ctx.shadowBlur = prop * opts.shadowToTimePropMult;
-        ctx.fillStyle = ctx.shadowColor = `hsla(${hue.toFixed(2)}, 85%, ${light.toFixed(2)}%, ${Math.max(0.06, alpha).toFixed(3)})`;
+        ctx.fillStyle = ctx.shadowColor = `hsla(${hue.toFixed(2)}, ${Math.max(6, saturation).toFixed(2)}%, ${light.toFixed(2)}%, ${Math.max(0.05, alpha).toFixed(3)})`;
         ctx.fillRect(drawX, drawY, 2, 2);
 
         if (Math.random() < opts.sparkChance) {
@@ -1346,8 +1338,6 @@
       };
 
       function fadePreviousFrame() {
-        /* This is the main fix:
-           fade the old effect without painting a fake black rectangle */
         ctx.globalCompositeOperation = "destination-out";
         ctx.fillStyle = `rgba(0, 0, 0, ${opts.repaintAlpha})`;
         ctx.fillRect(0, 0, w, h);
@@ -1360,12 +1350,12 @@
           0,
           opts.cx,
           opts.cy,
-          Math.max(w, h) * 0.28
+          Math.max(w, h) * config.atmosphereRadius
         );
 
-        grad.addColorStop(0, "rgba(74, 156, 238, 0.05)");
-        grad.addColorStop(0.28, "rgba(38, 94, 190, 0.028)");
-        grad.addColorStop(0.58, "rgba(12, 28, 80, 0.01)");
+        grad.addColorStop(0, config.atmosphereCore);
+        grad.addColorStop(0.28, config.atmosphereMid);
+        grad.addColorStop(0.58, config.atmosphereOuter);
         grad.addColorStop(1, "rgba(0, 0, 0, 0)");
 
         ctx.globalCompositeOperation = "source-over";
@@ -1377,7 +1367,6 @@
         if (!running) return;
 
         rafId = requestAnimationFrame(render);
-
         ++tick;
 
         fadePreviousFrame();
@@ -1429,7 +1418,7 @@
               }
             });
           },
-          { threshold: 0.18 }
+          { threshold: config.threshold || 0.18 }
         );
 
         intersectionObserver.observe(panel);
@@ -1446,7 +1435,260 @@
       });
     }
 
-    initWhyWorksFullFx();
+    initBranchMeshFx({
+      canvasId: "why-works-full-canvas",
+      panelSelector: ".why-works-panel",
+      len: 21,
+      smallLen: 18,
+      count: 68,
+      smallCount: 48,
+      reducedCount: 24,
+      baseTime: 13,
+      addedTime: 13,
+      reducedBaseTime: 16,
+      reducedAddedTime: 16,
+      dieChance: 0.05,
+      spawnChance: 1,
+      reducedSpawnChance: 0.45,
+      sparkChance: 0.08,
+      reducedSparkChance: 0.03,
+      sparkDist: 9,
+      sparkSize: 1.7,
+      baseHue: 214,
+      hueChange: 0.042,
+      hueJitter: 0,
+      baseSaturation: 85,
+      addedSaturation: 0,
+      baseLight: 40,
+      addedLight: 11,
+      baseAlpha: 0.25,
+      smallBaseAlpha: 0.2,
+      shadowToTimePropMult: 3.2,
+      baseLightInputMultiplier: 0.006,
+      addedLightInputMultiplier: 0.012,
+      repaintAlpha: 0.048,
+      reducedRepaintAlpha: 0.12,
+      startX: 0.34,
+      startY: 0.44,
+      targetStartX: 0.64,
+      targetStartY: 0.5,
+      targetMinX: 0.32,
+      targetMaxX: 0.72,
+      targetMinY: 0.3,
+      targetMaxY: 0.64,
+      dieScaleX: 0.48,
+      dieScaleY: 0.38,
+      anchorLerp: 0.0019,
+      reducedAnchorLerp: 0.0008,
+      atmosphereRadius: 0.28,
+      atmosphereCore: "rgba(74, 156, 238, 0.05)",
+      atmosphereMid: "rgba(38, 94, 190, 0.028)",
+      atmosphereOuter: "rgba(12, 28, 80, 0.01)"
+    });
+
+    initBranchMeshFx({
+      canvasId: "pathway-ambient-canvas-top",
+      panelSelector: ".pathway-card",
+      len: 19,
+      smallLen: 16,
+      count: 26,
+      smallCount: 16,
+      reducedCount: 8,
+      baseTime: 13,
+      addedTime: 13,
+      reducedBaseTime: 16,
+      reducedAddedTime: 16,
+      dieChance: 0.05,
+      spawnChance: 0.88,
+      reducedSpawnChance: 0.32,
+      sparkChance: 0.045,
+      reducedSparkChance: 0.015,
+      sparkDist: 7,
+      sparkSize: 1.35,
+      baseHue: 210,
+      hueChange: 0.01,
+      hueJitter: 5,
+      baseSaturation: 16,
+      addedSaturation: 8,
+      baseLight: 74,
+      addedLight: 8,
+      baseAlpha: 0.13,
+      smallBaseAlpha: 0.1,
+      shadowToTimePropMult: 2.6,
+      baseLightInputMultiplier: 0.006,
+      addedLightInputMultiplier: 0.012,
+      repaintAlpha: 0.06,
+      reducedRepaintAlpha: 0.12,
+      startX: 0.26,
+      startY: 0.16,
+      targetStartX: 0.72,
+      targetStartY: 0.18,
+      targetMinX: 0.18,
+      targetMaxX: 0.84,
+      targetMinY: 0.08,
+      targetMaxY: 0.24,
+      dieScaleX: 0.5,
+      dieScaleY: 0.16,
+      anchorLerp: 0.0017,
+      reducedAnchorLerp: 0.0008,
+      atmosphereRadius: 0.18,
+      atmosphereCore: "rgba(222, 228, 234, 0.028)",
+      atmosphereMid: "rgba(164, 176, 188, 0.014)",
+      atmosphereOuter: "rgba(24, 30, 36, 0.006)"
+    });
+
+    initBranchMeshFx({
+      canvasId: "pathway-ambient-canvas-right",
+      panelSelector: ".pathway-card",
+      len: 19,
+      smallLen: 16,
+      count: 24,
+      smallCount: 15,
+      reducedCount: 8,
+      baseTime: 13,
+      addedTime: 13,
+      reducedBaseTime: 16,
+      reducedAddedTime: 16,
+      dieChance: 0.05,
+      spawnChance: 0.86,
+      reducedSpawnChance: 0.3,
+      sparkChance: 0.04,
+      reducedSparkChance: 0.015,
+      sparkDist: 7,
+      sparkSize: 1.3,
+      baseHue: 212,
+      hueChange: 0.01,
+      hueJitter: 4,
+      baseSaturation: 14,
+      addedSaturation: 7,
+      baseLight: 73,
+      addedLight: 8,
+      baseAlpha: 0.12,
+      smallBaseAlpha: 0.095,
+      shadowToTimePropMult: 2.6,
+      baseLightInputMultiplier: 0.006,
+      addedLightInputMultiplier: 0.012,
+      repaintAlpha: 0.06,
+      reducedRepaintAlpha: 0.12,
+      startX: 0.84,
+      startY: 0.28,
+      targetStartX: 0.82,
+      targetStartY: 0.74,
+      targetMinX: 0.76,
+      targetMaxX: 0.92,
+      targetMinY: 0.16,
+      targetMaxY: 0.84,
+      dieScaleX: 0.16,
+      dieScaleY: 0.42,
+      anchorLerp: 0.0017,
+      reducedAnchorLerp: 0.0008,
+      atmosphereRadius: 0.16,
+      atmosphereCore: "rgba(226, 232, 238, 0.026)",
+      atmosphereMid: "rgba(168, 178, 188, 0.012)",
+      atmosphereOuter: "rgba(24, 30, 36, 0.006)"
+    });
+
+    initBranchMeshFx({
+      canvasId: "pathway-ambient-canvas-bottom",
+      panelSelector: ".pathway-card",
+      len: 19,
+      smallLen: 16,
+      count: 26,
+      smallCount: 16,
+      reducedCount: 8,
+      baseTime: 13,
+      addedTime: 13,
+      reducedBaseTime: 16,
+      reducedAddedTime: 16,
+      dieChance: 0.05,
+      spawnChance: 0.88,
+      reducedSpawnChance: 0.32,
+      sparkChance: 0.045,
+      reducedSparkChance: 0.015,
+      sparkDist: 7,
+      sparkSize: 1.35,
+      baseHue: 34,
+      hueChange: 0.012,
+      hueJitter: 9,
+      baseSaturation: 32,
+      addedSaturation: 12,
+      baseLight: 66,
+      addedLight: 8,
+      baseAlpha: 0.13,
+      smallBaseAlpha: 0.1,
+      shadowToTimePropMult: 2.7,
+      baseLightInputMultiplier: 0.006,
+      addedLightInputMultiplier: 0.012,
+      repaintAlpha: 0.06,
+      reducedRepaintAlpha: 0.12,
+      startX: 0.74,
+      startY: 0.84,
+      targetStartX: 0.24,
+      targetStartY: 0.82,
+      targetMinX: 0.16,
+      targetMaxX: 0.84,
+      targetMinY: 0.74,
+      targetMaxY: 0.92,
+      dieScaleX: 0.5,
+      dieScaleY: 0.16,
+      anchorLerp: 0.0017,
+      reducedAnchorLerp: 0.0008,
+      atmosphereRadius: 0.18,
+      atmosphereCore: "rgba(214, 178, 122, 0.028)",
+      atmosphereMid: "rgba(176, 136, 84, 0.014)",
+      atmosphereOuter: "rgba(38, 24, 12, 0.006)"
+    });
+
+    initBranchMeshFx({
+      canvasId: "pathway-ambient-canvas-left",
+      panelSelector: ".pathway-card",
+      len: 19,
+      smallLen: 16,
+      count: 24,
+      smallCount: 15,
+      reducedCount: 8,
+      baseTime: 13,
+      addedTime: 13,
+      reducedBaseTime: 16,
+      reducedAddedTime: 16,
+      dieChance: 0.05,
+      spawnChance: 0.86,
+      reducedSpawnChance: 0.3,
+      sparkChance: 0.04,
+      reducedSparkChance: 0.015,
+      sparkDist: 7,
+      sparkSize: 1.3,
+      baseHue: 28,
+      hueChange: 0.012,
+      hueJitter: 8,
+      baseSaturation: 28,
+      addedSaturation: 10,
+      baseLight: 64,
+      addedLight: 8,
+      baseAlpha: 0.12,
+      smallBaseAlpha: 0.095,
+      shadowToTimePropMult: 2.7,
+      baseLightInputMultiplier: 0.006,
+      addedLightInputMultiplier: 0.012,
+      repaintAlpha: 0.06,
+      reducedRepaintAlpha: 0.12,
+      startX: 0.16,
+      startY: 0.72,
+      targetStartX: 0.18,
+      targetStartY: 0.28,
+      targetMinX: 0.08,
+      targetMaxX: 0.24,
+      targetMinY: 0.16,
+      targetMaxY: 0.84,
+      dieScaleX: 0.16,
+      dieScaleY: 0.42,
+      anchorLerp: 0.0017,
+      reducedAnchorLerp: 0.0008,
+      atmosphereRadius: 0.16,
+      atmosphereCore: "rgba(212, 168, 116, 0.026)",
+      atmosphereMid: "rgba(168, 128, 80, 0.012)",
+      atmosphereOuter: "rgba(38, 24, 12, 0.006)"
+    });
   </script>
 </body>
 
