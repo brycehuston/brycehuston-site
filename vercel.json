@@ -1,35 +1,4 @@
 {
-  "cleanUrls": true,
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/about.html",
-      "destination": "/about",
-      "permanent": true
-    },
-    {
-      "source": "/projects.html",
-      "destination": "/projects",
-      "permanent": true
-    },
-    {
-      "source": "/solutions.html",
-      "destination": "/solutions",
-      "permanent": true
-    },
-    {
-      "source": "/explore.html",
-      "destination": "/explore",
-      "permanent": true
-    },
-    {
-      "source": "/contact.html",
-      "destination": "/contact",
-      "permanent": true
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true
 }

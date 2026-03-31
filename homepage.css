@@ -13839,13 +13839,13 @@ body.solutions-page .solutions-hero-title-block {
 
 @media (max-width: 640px) {
   body.solutions-page .services-rail-stage {
-    padding-inline: 0.08rem;
-    scroll-padding-left: 0.08rem;
+    padding-inline: 0.7rem;
+    scroll-padding-left: 0.7rem;
   }
 
   body.solutions-page .services-rail-track {
-    grid-auto-columns: clamp(15rem, calc(100% - 2.9rem), 17.1rem);
-    gap: 0.78rem;
+    grid-auto-columns: clamp(14.35rem, calc(100% - 4.6rem), 15.9rem);
+    gap: 0.9rem;
     align-items: stretch;
   }
 
@@ -13861,6 +13861,10 @@ body.solutions-page .solutions-hero-title-block {
     margin-top: 0 !important;
     align-self: stretch;
     scroll-snap-align: start;
+  }
+
+  body.solutions-page .services-rail-stage::after {
+    width: 2.9rem;
   }
 
   body.solutions-page .services-rail-card h3 {
