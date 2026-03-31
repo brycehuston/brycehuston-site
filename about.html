@@ -21,21 +21,25 @@
 
     <main class="interior-main">
       <header class="hero-nav-bar">
-        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+        <a class="hero-brand" href="/" aria-label="Bryce Huston home">
           <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="hero-nav" aria-label="Primary">
-          <a class="active" href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a href="solutions.html">SOLUTIONS</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+        <nav class="hero-nav" id="site-primary-nav" aria-label="Primary">
+          <a class="active" href="/about">About</a>
+          <a href="/projects">Projects</a>
+          <a href="/solutions">SOLUTIONS</a>
+          <a href="/explore">Explore</a>
+          <a href="/contact">Contact</a>
         </nav>
-        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="site-primary-nav"
+          aria-label="Open navigation">
+          <span class="mobile-nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+        <a class="button button-primary nav-cta" href="/contact">Work With Me</a>
       </header>
 
       <section class="page-hero-section">
@@ -48,8 +52,8 @@
               and stays founder-led from the first direction call through the finish.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="projects.html">View Projects</a>
-              <a class="button button-secondary" href="contact.html">Start A Conversation</a>
+              <a class="button button-primary" href="/projects">View Projects</a>
+              <a class="button button-secondary" href="/contact">Start A Conversation</a>
             </div>
           </div>
 
@@ -175,7 +179,7 @@
               without turning the site into a dump of everything I have ever photographed.
             </p>
             <div class="hero-actions">
-              <a class="button button-secondary" href="explore.html">Go To Explore</a>
+              <a class="button button-secondary" href="/explore">Go To Explore</a>
             </div>
           </article>
 
@@ -197,18 +201,18 @@
 
       <footer class="site-footer">
         <div class="footer-inner">
-          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+          <a class="footer-brand" href="/" aria-label="Bryce Huston home">
             <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="solutions.html">SOLUTIONS</a>
-            <a href="explore.html">Explore</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/solutions">SOLUTIONS</a>
+            <a href="/explore">Explore</a>
+            <a href="/contact">Contact</a>
           </nav>
           <p class="footer-note">Founder-led digital work</p>
         </div>

@@ -21,21 +21,25 @@
 
     <main class="interior-main">
       <header class="hero-nav-bar">
-        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+        <a class="hero-brand" href="/" aria-label="Bryce Huston home">
           <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="hero-nav" aria-label="Primary">
-          <a href="about.html">About</a>
-          <a class="active" href="projects.html">Projects</a>
-          <a href="solutions.html">SOLUTIONS</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+        <nav class="hero-nav" id="site-primary-nav" aria-label="Primary">
+          <a href="/about">About</a>
+          <a class="active" href="/projects">Projects</a>
+          <a href="/solutions">SOLUTIONS</a>
+          <a href="/explore">Explore</a>
+          <a href="/contact">Contact</a>
         </nav>
-        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="site-primary-nav"
+          aria-label="Open navigation">
+          <span class="mobile-nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+        <a class="button button-primary nav-cta" href="/contact">Work With Me</a>
       </header>
 
       <section class="page-hero-section">
@@ -47,8 +51,8 @@
               The strongest work should carry the page first. Everything else stays in support.
             </p>
             <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Discuss A Project</a>
-              <a class="button button-secondary" href="solutions.html">See Services</a>
+              <a class="button button-primary" href="/contact">Discuss A Project</a>
+              <a class="button button-secondary" href="/solutions">See Services</a>
             </div>
           </div>
 
@@ -231,26 +235,26 @@
             Websites, product surfaces, and systems work best when the visual layer and the execution layer move together.
           </p>
           <div class="hero-actions">
-            <a class="button button-primary" href="contact.html">Start A Project</a>
-            <a class="button button-secondary" href="solutions.html">View Solutions</a>
+            <a class="button button-primary" href="/contact">Start A Project</a>
+            <a class="button button-secondary" href="/solutions">View Solutions</a>
           </div>
         </article>
       </section>
 
       <footer class="site-footer">
         <div class="footer-inner">
-          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+          <a class="footer-brand" href="/" aria-label="Bryce Huston home">
             <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="solutions.html">SOLUTIONS</a>
-            <a href="explore.html">Explore</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/solutions">SOLUTIONS</a>
+            <a href="/explore">Explore</a>
+            <a href="/contact">Contact</a>
           </nav>
           <p class="footer-note">Selected work only</p>
         </div>

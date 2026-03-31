@@ -5,13 +5,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description"
-    content="Huston Solutions by Bryce Huston: premium websites, automation, tech support, recovery, and dependable founder-led execution." />
-  <title>Bryce Huston | Solutions</title>
+    content="Huston Solutions by Bryce Huston: founder-led websites, automation, tech support, and recovery for Greater Vancouver businesses, households, and teams." />
+  <title>Huston Solutions | Websites, Automation, Tech Support &amp; Recovery in Greater Vancouver</title>
+  <link rel="canonical" href="https://www.brycehuston.com/solutions" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title"
+    content="Huston Solutions | Websites, Automation, Tech Support &amp; Recovery in Greater Vancouver" />
+  <meta property="og:description"
+    content="Founder-led websites, automation, tech support, and recovery for Greater Vancouver businesses, households, and teams." />
+  <meta property="og:url" content="https://www.brycehuston.com/solutions" />
   <link rel="icon" type="image/png" href="media/favicon.png" />
   <link rel="stylesheet" href="homepage.css" />
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
   <script defer src="script.js"></script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Huston Solutions",
+      "url": "https://www.brycehuston.com/solutions",
+      "telephone": "+1-250-320-7012",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Vancouver",
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "areaServed": [
+        {
+          "@type": "City",
+          "name": "Vancouver"
+        },
+        {
+          "@type": "City",
+          "name": "West Vancouver"
+        },
+        {
+          "@type": "City",
+          "name": "Lions Bay"
+        },
+        {
+          "@type": "City",
+          "name": "Burnaby"
+        },
+        {
+          "@type": "City",
+          "name": "Richmond"
+        },
+        {
+          "@type": "City",
+          "name": "Langley"
+        },
+        {
+          "@type": "City",
+          "name": "Surrey"
+        },
+        {
+          "@type": "City",
+          "name": "Coquitlam"
+        },
+        {
+          "@type": "City",
+          "name": "Abbotsford"
+        }
+      ],
+      "serviceType": [
+        "Premium websites",
+        "Automation systems and cleanup",
+        "Tech support",
+        "Recovery support"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Bryce Huston"
+      }
+    }
+  </script>
 </head>
 
 <body class="interior-page solutions-page">
@@ -24,21 +94,25 @@
 
     <main class="interior-main">
       <header class="hero-nav-bar">
-        <a class="hero-brand" href="index.html" aria-label="Bryce Huston home">
+        <a class="hero-brand" href="/" aria-label="Bryce Huston home">
           <span class="brand-dot"></span>
           <span class="brand-lockup">
             <strong>Bryce</strong>
             <span>Huston</span>
           </span>
         </a>
-        <nav class="hero-nav" aria-label="Primary">
-          <a href="about.html">About</a>
-          <a href="projects.html">Projects</a>
-          <a class="active" href="solutions.html">SOLUTIONS</a>
-          <a href="explore.html">Explore</a>
-          <a href="contact.html">Contact</a>
+        <nav class="hero-nav" id="site-primary-nav" aria-label="Primary">
+          <a href="/about">About</a>
+          <a href="/projects">Projects</a>
+          <a class="active" href="/solutions">SOLUTIONS</a>
+          <a href="/explore">Explore</a>
+          <a href="/contact">Contact</a>
         </nav>
-        <a class="button button-primary nav-cta" href="contact.html">Work With Me</a>
+        <button class="mobile-nav-toggle" type="button" aria-expanded="false" aria-controls="site-primary-nav"
+          aria-label="Open navigation">
+          <span class="mobile-nav-toggle-lines" aria-hidden="true"></span>
+        </button>
+        <a class="button button-primary nav-cta" href="/contact">Work With Me</a>
       </header>
 
       <section class="page-hero-section solutions-hero-section">
@@ -46,73 +120,85 @@
           <div class="solutions-hero-zap" aria-hidden="true">
             <canvas class="solutions-hero-zap-canvas" id="solutionsHeroZapCanvas"></canvas>
           </div>
-          <div class="page-hero-grid solutions-hero-grid">
-            <div class="page-hero-copy solutions-hero-copy">
-              <div class="solutions-hero-inline-proof" aria-label="Solutions trust summary">
-                <span>★★★★★</span>
-              </div>
-              <p class="hero-kicker solutions-hero-kicker" data-solutions-kicker>Websites, support, automation, and
-                recovery</p>
-              <h1 class="solutions-hero-title" data-solutions-hero-title>
-                <span class="solutions-hero-title-text" data-text="HUSTON SOLUTIONS">HUSTON SOLUTIONS</span>
-              </h1>
-              <p class="page-lead solutions-hero-lead">
-                <span class="solutions-hero-lead-line">Founder-led execution, handled calmly from first reply to final
-                  follow-through.</span>
-              </p>
-              <div class="hero-actions">
-                <a class="button button-primary" href="contact.html">Start A Project</a>
-                <a class="button button-secondary" href="projects.html">See The Work</a>
-              </div>
-            </div>
-          </div>
-          <div class="solutions-hero-area-band reveal" data-frame-trace="solutions-area">
-            <div class="service-area-header">
-              <h2>SERVICE AREAS:</h2>
-            </div>
-
-            <div class="service-area-motion" aria-label="Service areas">
-              <div class="service-area-marquee">
-                <div class="service-area-track">
-                  <div class="service-area-sequence">
-                    <span class="service-area-tile">Vancouver</span>
-                    <span class="service-area-tile">West Vancouver</span>
-                    <span class="service-area-tile">Lions Bay</span>
-                    <span class="service-area-tile">Burnaby</span>
-                    <span class="service-area-tile">Richmond</span>
-                    <span class="service-area-tile">Langley</span>
-                    <span class="service-area-tile">Surrey</span>
-                    <span class="service-area-tile">Coquitlam</span>
-                    <span class="service-area-tile">Abbotsford</span>
+          <div class="solutions-hero-layout">
+            <div class="solutions-hero-main">
+              <div class="page-hero-grid solutions-hero-grid">
+                <div class="page-hero-copy solutions-hero-copy">
+                  <div class="solutions-hero-topline">
+                    <div class="solutions-hero-inline-proof" aria-label="Rated five stars from 20 plus Google reviews">
+                      <span class="solutions-hero-proof-stars" aria-hidden="true">★★★★★</span>
+                      <span class="solutions-hero-proof-text">20+ Google reviews</span>
+                    </div>
+                    <p class="hero-kicker solutions-hero-kicker" data-solutions-kicker>Websites, support, automation, and
+                      recovery</p>
                   </div>
-
-                  <div class="service-area-sequence" aria-hidden="true">
-                    <span class="service-area-tile">Vancouver</span>
-                    <span class="service-area-tile">West Vancouver</span>
-                    <span class="service-area-tile">Lions Bay</span>
-                    <span class="service-area-tile">Burnaby</span>
-                    <span class="service-area-tile">Richmond</span>
-                    <span class="service-area-tile">Langley</span>
-                    <span class="service-area-tile">Surrey</span>
-                    <span class="service-area-tile">Coquitlam</span>
-                    <span class="service-area-tile">Abbotsford</span>
+                  <div class="solutions-hero-title-block">
+                    <h1 class="solutions-hero-title" data-solutions-hero-title>
+                      <span class="solutions-hero-title-text" data-text="HUSTON SOLUTIONS">HUSTON SOLUTIONS</span>
+                    </h1>
+                    <p class="page-lead solutions-hero-lead">
+                      <span class="solutions-hero-lead-line">Founder-led execution for Greater Vancouver businesses,
+                        households, and teams.</span>
+                    </p>
+                  </div>
+                  <div class="hero-actions">
+                    <a class="button button-primary" href="/contact">Start a Project</a>
+                    <a class="button button-secondary hero-secondary-cta" href="/projects">See the Work</a>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div class="service-area-mobile-grid" aria-label="Service areas">
-              <span class="service-area-tile">Vancouver</span>
-              <span class="service-area-tile">West Vancouver</span>
-              <span class="service-area-tile">Lions Bay</span>
-              <span class="service-area-tile">Burnaby</span>
-              <span class="service-area-tile">Richmond</span>
-              <span class="service-area-tile">Langley</span>
-              <span class="service-area-tile">Surrey</span>
-              <span class="service-area-tile">Coquitlam</span>
-              <span class="service-area-tile">Abbotsford</span>
+            <div class="solutions-hero-footer">
+              <div class="solutions-hero-area-band reveal" data-frame-trace="solutions-area">
+                <div class="service-area-header">
+                  <h2>SERVICE AREAS:</h2>
+                </div>
+
+                <div class="service-area-motion" aria-hidden="true">
+                  <div class="service-area-marquee">
+                    <div class="service-area-track">
+                      <div class="service-area-sequence">
+                        <span class="service-area-tile">Burnaby</span>
+                        <span class="service-area-tile">Richmond</span>
+                        <span class="service-area-tile">Langley</span>
+                        <span class="service-area-tile">Surrey</span>
+                        <span class="service-area-tile">Coquitlam</span>
+                        <span class="service-area-tile">Abbotsford</span>
+                        <span class="service-area-tile">Vancouver</span>
+                        <span class="service-area-tile">West Vancouver</span>
+                        <span class="service-area-tile">Lions Bay</span>
+                      </div>
+                      <div class="service-area-sequence" aria-hidden="true">
+                        <span class="service-area-tile">Burnaby</span>
+                        <span class="service-area-tile">Richmond</span>
+                        <span class="service-area-tile">Langley</span>
+                        <span class="service-area-tile">Surrey</span>
+                        <span class="service-area-tile">Coquitlam</span>
+                        <span class="service-area-tile">Abbotsford</span>
+                        <span class="service-area-tile">Vancouver</span>
+                        <span class="service-area-tile">West Vancouver</span>
+                        <span class="service-area-tile">Lions Bay</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="service-area-mobile-grid" aria-label="Supported Greater Vancouver service areas">
+                  <span class="service-area-tile">Vancouver</span>
+                  <span class="service-area-tile">West Vancouver</span>
+                  <span class="service-area-tile">Lions Bay</span>
+                  <span class="service-area-tile">Burnaby</span>
+                  <span class="service-area-tile">Richmond</span>
+                  <span class="service-area-tile">Langley</span>
+                  <span class="service-area-tile">Surrey</span>
+                  <span class="service-area-tile">Coquitlam</span>
+                  <span class="service-area-tile">Abbotsford</span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
       </section>
 
       <div class="hero-stats-divider" aria-hidden="true"></div>
@@ -121,8 +207,10 @@
         aria-label="Solutions stats" data-stats-section>
         <div class="stats-heading-block">
           <span class="accent-line" aria-hidden="true"></span>
-          <p class="eyebrow">Trust Earned</p>
-          <h2>Experience</h2>
+          <p class="eyebrow">Track Record</p>
+          <h2>Built on repeat trust.</h2>
+          <p class="solutions-stats-support">On-site support and recovery are focused on Greater Vancouver. Website,
+            automation, and cleanup projects can also be scoped more broadly when the fit is right.</p>
         </div>
         <article class="stats-card reveal reveal-soft frame-trace-card" data-stat-card data-frame-trace="stats">
           <span class="accent-line" aria-hidden="true"></span>
@@ -145,7 +233,7 @@
           <div class="stats-value-wrap" aria-hidden="true">
             <span class="stats-value" data-value="20" data-suffix="+">20+</span>
           </div>
-          <p class="stats-label">5-Star Reviews</p>
+          <p class="stats-label">5-Star Google Reviews</p>
         </article>
       </section>
 
@@ -156,7 +244,7 @@
             <span class="services-rail-rule" aria-hidden="true"></span>
             <h2>Services</h2>
             <p class="services-rail-support">
-              Websites, automation, support, and recovery, all in one place.
+              Four focused ways I help clients launch, clean up, recover, and move forward without a bloated process.
             </p>
           </div>
 
@@ -167,37 +255,47 @@
                 <p class="services-rail-card-kicker">Websites</p>
                 <h3>Premium websites</h3>
                 <p class="services-rail-card-summary">Custom business sites, landing pages, and redesigns built to look
-                  sharp and turn interest into inquiries.</p>
-                <p class="services-rail-card-benefit">Design, positioning, and lead flow.</p>
+                  sharp and turn attention into inquiries.</p>
+                <p class="services-rail-card-benefit">Positioning, build, and inquiry flow.</p>
               </article>
 
               <article class="panel services-rail-card frame-trace-card" data-services-card
                 data-frame-trace="solutions-service" data-frame-trace-delay="0.1">
                 <p class="services-rail-card-kicker">Automation</p>
-                <h3>Automation + cleanup</h3>
-                <p class="services-rail-card-summary">Practical automation, AI workflows, and systems cleanup that
-                  reduce repetitive admin and operational drag.</p>
-                <p class="services-rail-card-benefit">Less manual work. Better handoff.</p>
+                <h3>Automation systems</h3>
+                <p class="services-rail-card-summary">Practical automation, AI workflows, and cleanup that reduce
+                  repetitive admin and make handoff cleaner.</p>
+                <p class="services-rail-card-benefit">Less manual admin. Cleaner ops.</p>
               </article>
 
               <article class="panel services-rail-card frame-trace-card" data-services-card
                 data-frame-trace="solutions-service" data-frame-trace-delay="0.2">
                 <p class="services-rail-card-kicker">Support</p>
                 <h3>Tech support</h3>
-                <p class="services-rail-card-summary">Device setup, troubleshooting, account help, printer issues, and
-                  patient one-on-one help for messy tech problems.</p>
-                <p class="services-rail-card-benefit">Fixes, setup, and real guidance.</p>
+                <p class="services-rail-card-summary">Setup, troubleshooting, accounts, printers, and one-on-one help
+                  when normal support is too vague or too slow.</p>
+                <p class="services-rail-card-benefit">Patient help. Clear fixes.</p>
               </article>
 
               <article class="panel services-rail-card frame-trace-card" data-services-card
                 data-frame-trace="solutions-service" data-frame-trace-delay="0.3">
                 <p class="services-rail-card-kicker">Recovery</p>
-                <h3>Recovery + scams</h3>
-                <p class="services-rail-card-summary">Help after scams, lockouts, crashes, malware, and urgent failures
-                  where something important suddenly stops working.</p>
+                <h3>Recovery response</h3>
+                <p class="services-rail-card-summary">Urgent help after scams, lockouts, crashes, malware, and sudden
+                  failures when something important stops working.</p>
                 <p class="services-rail-card-benefit">Urgent triage. Safer next steps.</p>
               </article>
             </div>
+          </div>
+
+          <div class="services-rail-mobile-hint" aria-hidden="true">
+            <span class="services-rail-mobile-hint-text">Swipe for more</span>
+            <span class="services-rail-mobile-hint-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+            <span class="services-rail-mobile-hint-arrow">→</span>
           </div>
         </div>
       </section>
@@ -209,13 +307,12 @@
             <h2>Testimonials</h2>
             <p class="google-proof-stars" aria-label="5 out of 5 stars">★★★★★</p>
             <p class="section-support">Real feedback from real clients.</p>
-            <a class="text-link google-proof-link"
-              href="https://www.google.com/search?q=huston+solutions&rlz=1C1NDCM_enAU835AU835&oq=huston+solutions&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIICAEQRRgnGDsyCggCEAAYChgWGB4yCAgDEAAYFhgeMg0IBBAAGIYDGIAEGIoFMg0IBRAAGIYDGIAEGIoFMgYIBhBFGDwyBggHEEUYPNIBCDMwMDlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x537dedcd1c3f3309:0x65d5d753f4b8b95d,1,,,,"
+            <a class="text-link google-proof-link" href="https://www.google.com/search?q=Huston+Solutions+reviews"
               target="_blank" rel="noreferrer noopener">View on Google</a>
           </article>
 
-          <div class="google-proof-stage">
-            <div class="google-proof-columns" aria-label="Selected Google review excerpts">
+          <div class="google-proof-stage" aria-hidden="true">
+            <div class="google-proof-columns">
               <div class="google-proof-column google-proof-column-a">
                 <div class="google-review-track">
                   <div class="google-review-stack">
@@ -229,8 +326,8 @@
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use it
-                        properly and I could understand how new features worked..."
+                        "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use
+                        it properly and I could understand how new features worked..."
                       </p>
                     </article>
 
@@ -244,8 +341,8 @@
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was able to analyze and fix the problem in a timely manner... His fee was very reasonable
-                        and he saved me a ton of money..."
+                        "Bryce was able to analyze and fix the problem in a timely manner... His fee was very
+                        reasonable and he saved me a ton of money..."
                       </p>
                     </article>
 
@@ -253,14 +350,14 @@
                       <div class="google-review-card-head">
                         <div class="google-review-avatar">R</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">roland blaise</p>
+                          <p class="google-review-name">Rene Chamberland</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce has solved my computer problems on three different occasions... He is knowledgeable,
-                        articulate and has provided valuable information."
+                        "Bryce was awesome, he was friendly, directed me with the correct information so I could make a
+                        decision. He helped me out timely and efficient."
                       </p>
                     </article>
                   </div>
@@ -276,8 +373,8 @@
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use it
-                        properly and I could understand how new features worked..."
+                        "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use
+                        it properly and I could understand how new features worked..."
                       </p>
                     </article>
 
@@ -291,8 +388,8 @@
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was able to analyze and fix the problem in a timely manner... His fee was very reasonable
-                        and he saved me a ton of money..."
+                        "Bryce was able to analyze and fix the problem in a timely manner... His fee was very
+                        reasonable and he saved me a ton of money..."
                       </p>
                     </article>
 
@@ -300,14 +397,14 @@
                       <div class="google-review-card-head">
                         <div class="google-review-avatar">R</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">roland blaise</p>
+                          <p class="google-review-name">Rene Chamberland</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce has solved my computer problems on three different occasions... He is knowledgeable,
-                        articulate and has provided valuable information."
+                        "Bryce was awesome, he was friendly, directed me with the correct information so I could make a
+                        decision. He helped me out timely and efficient."
                       </p>
                     </article>
                   </div>
@@ -334,31 +431,31 @@
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">G</div>
+                        <div class="google-review-avatar">E</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Greg Orriss</p>
+                          <p class="google-review-name">E. Wijnstra</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
-                        recommend him for all computer solutions."
+                        "He was here within 24 hours, solved the issue very fast, and explained the problem in detail
+                        that I truly appreciate!"
                       </p>
                     </article>
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">R</div>
+                        <div class="google-review-avatar">J</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Rene Chamberland</p>
+                          <p class="google-review-name">Jadine Leclaire</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was awesome, he was friendly, directed me with the correct information so I could make a
-                        decision. He helped me out timely and efficient."
+                        "Bryce was able twice to help me set up my printer with my new laptop... He is patient,
+                        knowledgeable, reliable and responds promptly."
                       </p>
                     </article>
                   </div>
@@ -381,31 +478,31 @@
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">G</div>
+                        <div class="google-review-avatar">E</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Greg Orriss</p>
+                          <p class="google-review-name">E. Wijnstra</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
-                        recommend him for all computer solutions."
+                        "He was here within 24 hours, solved the issue very fast, and explained the problem in detail
+                        that I truly appreciate!"
                       </p>
                     </article>
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">R</div>
+                        <div class="google-review-avatar">J</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Rene Chamberland</p>
+                          <p class="google-review-name">Jadine Leclaire</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was awesome, he was friendly, directed me with the correct information so I could make a
-                        decision. He helped me out timely and efficient."
+                        "Bryce was able twice to help me set up my printer with my new laptop... He is patient,
+                        knowledgeable, reliable and responds promptly."
                       </p>
                     </article>
                   </div>
@@ -432,31 +529,31 @@
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">J</div>
+                        <div class="google-review-avatar">G</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Jadine Leclaire</p>
+                          <p class="google-review-name">Greg Orriss</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was able twice to help me set up my printer with my new laptop... He is patient,
-                        knowledgeable, reliable and responds promptly."
+                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                        recommend him for all computer solutions."
                       </p>
                     </article>
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">E</div>
+                        <div class="google-review-avatar">G</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">E. Wijnstra</p>
+                          <p class="google-review-name">Greg Orriss</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "He was here within 24 hours, solved the issue very fast, and explained the problem in detail
-                        that I truly appreciate!"
+                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                        recommend him for all computer solutions."
                       </p>
                     </article>
                   </div>
@@ -479,31 +576,31 @@
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">J</div>
+                        <div class="google-review-avatar">G</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">Jadine Leclaire</p>
+                          <p class="google-review-name">Greg Orriss</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "Bryce was able twice to help me set up my printer with my new laptop... He is patient,
-                        knowledgeable, reliable and responds promptly."
+                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                        recommend him for all computer solutions."
                       </p>
                     </article>
 
                     <article class="google-review-card">
                       <div class="google-review-card-head">
-                        <div class="google-review-avatar">E</div>
+                        <div class="google-review-avatar">G</div>
                         <div class="google-review-card-meta">
-                          <p class="google-review-name">E. Wijnstra</p>
+                          <p class="google-review-name">Greg Orriss</p>
                           <p class="google-review-source">Verified Google Review</p>
                         </div>
                       </div>
                       <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
                       <p class="google-review-excerpt">
-                        "He was here within 24 hours, solved the issue very fast, and explained the problem in detail
-                        that I truly appreciate!"
+                        "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                        recommend him for all computer solutions."
                       </p>
                     </article>
                   </div>
@@ -512,66 +609,104 @@
             </div>
           </div>
 
-          <div class="google-proof-mobile reveal reveal-soft">
-            <article class="google-review-card google-review-card-featured">
-              <div class="google-review-card-head">
-                <div class="google-review-avatar">A</div>
-                <div class="google-review-card-meta">
-                  <p class="google-review-name">Ann Hughes</p>
-                  <p class="google-review-source">Verified Google Review</p>
-                </div>
-              </div>
-              <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-              <p class="google-review-excerpt">
-                "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use it
-                properly and I could understand how new features worked..."
-              </p>
-            </article>
+          <div class="google-proof-mobile reveal reveal-soft" aria-hidden="true">
+            <div class="google-proof-mobile-lane">
+              <div class="google-proof-mobile-track">
+                <div class="google-proof-mobile-stack">
+                  <article class="google-review-card google-review-card-featured">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">A</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Ann Hughes</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use it
+                      properly and I could understand how new features worked..."
+                    </p>
+                  </article>
 
-            <article class="google-review-card google-review-card-featured">
-              <div class="google-review-card-head">
-                <div class="google-review-avatar">D</div>
-                <div class="google-review-card-meta">
-                  <p class="google-review-name">Dee Davies</p>
-                  <p class="google-review-source">Verified Google Review</p>
-                </div>
-              </div>
-              <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-              <p class="google-review-excerpt">
-                "Very quick to reply to my original question, and came the same day I really needed help... repaired my
-                old Macbook Pro and got it running good as new."
-              </p>
-            </article>
+                  <article class="google-review-card google-review-card-featured">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">D</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Dee Davies</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Very quick to reply to my original question, and came the same day I really needed help...
+                      repaired my old Macbook Pro and got it running good as new."
+                    </p>
+                  </article>
 
-            <article class="google-review-card">
-              <div class="google-review-card-head">
-                <div class="google-review-avatar">Z</div>
-                <div class="google-review-card-meta">
-                  <p class="google-review-name">Zukhra Roziyeva</p>
-                  <p class="google-review-source">Verified Google Review</p>
+                  <article class="google-review-card">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">G</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Greg Orriss</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                      recommend him for all computer solutions."
+                    </p>
+                  </article>
                 </div>
-              </div>
-              <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-              <p class="google-review-excerpt">
-                "My laptop crashed unexpectedly and I got a professional and prompt service... Bryce repaired my
-                computer in no time."
-              </p>
-            </article>
 
-            <article class="google-review-card">
-              <div class="google-review-card-head">
-                <div class="google-review-avatar">E</div>
-                <div class="google-review-card-meta">
-                  <p class="google-review-name">E. Wijnstra</p>
-                  <p class="google-review-source">Verified Google Review</p>
+                <div class="google-proof-mobile-stack" aria-hidden="true">
+                  <article class="google-review-card google-review-card-featured">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">A</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Ann Hughes</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Bryce Huston is a great teacher... he managed to get my laptop set up so I could finally use it
+                      properly and I could understand how new features worked..."
+                    </p>
+                  </article>
+
+                  <article class="google-review-card google-review-card-featured">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">D</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Dee Davies</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Very quick to reply to my original question, and came the same day I really needed help...
+                      repaired my old Macbook Pro and got it running good as new."
+                    </p>
+                  </article>
+
+                  <article class="google-review-card">
+                    <div class="google-review-card-head">
+                      <div class="google-review-avatar">G</div>
+                      <div class="google-review-card-meta">
+                        <p class="google-review-name">Greg Orriss</p>
+                        <p class="google-review-source">Verified Google Review</p>
+                      </div>
+                    </div>
+                    <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
+                    <p class="google-review-excerpt">
+                      "Bryce was very knowledgeable and patient. He successfully addressed all issues. I highly
+                      recommend him for all computer solutions."
+                    </p>
+                  </article>
                 </div>
               </div>
-              <p class="google-review-stars" aria-label="5 out of 5 stars">★★★★★</p>
-              <p class="google-review-excerpt">
-                "He was here within 24 hours, solved the issue very fast, and explained the problem in detail that I
-                truly appreciate!"
-              </p>
-            </article>
+            </div>
           </div>
         </div>
       </section>
@@ -583,12 +718,12 @@
             <p class="eyebrow">Best Fit</p>
             <h2>When something needs to launch, get fixed, or get unstuck.</h2>
             <p>
-              Useful for local businesses, households, and founder-led teams that need hands-on help without a bloated
-              agency process.
+              A strong fit for Greater Vancouver businesses, households, and founder-led teams that need hands-on help
+              without a bloated agency process.
             </p>
             <div class="solutions-copy-footnote">
-              <span>Launch work</span>
-              <span>Support issues</span>
+              <span>Founder-led websites</span>
+              <span>Local support</span>
               <span>Urgent recovery</span>
             </div>
           </article>
@@ -599,11 +734,12 @@
               data-delay="120" data-frame-trace="solutions-way">
               <p class="eyebrow">Common Needs</p>
               <ul class="detail-list">
-                <li>Launching or upgrading a business website</li>
+                <li>Launching or redesigning a business website</li>
                 <li>Cleaning up broken setup, accounts, or devices</li>
-                <li>Adding practical automation where manual work keeps piling up</li>
+                <li>Adding practical automation where repetitive admin keeps piling up</li>
                 <li>Getting fast help after scams, lockouts, crashes, or urgent failures</li>
               </ul>
+              <a class="button solutions-secondary-gold-button" href="/projects">See selected project work</a>
             </article>
           </div>
         </div>
@@ -646,35 +782,36 @@
             <p class="eyebrow">Next Step</p>
             <h2>Start your request.</h2>
             <p>
-              A short message is enough to start a website, support, cleanup, or recovery job.
+              A short message is enough to start website, automation, support, or recovery work in Greater Vancouver or
+              remotely where it fits.
             </p>
           </div>
 
           <div class="solutions-closing-action-panel">
-            <p>I’ll review the situation and reply with the fastest sensible next step.</p>
+            <p>I’ll review the scope and reply with the fastest sensible next step, whether that means a build plan, a
+              support call, or urgent triage.</p>
             <div class="hero-actions">
-              <a class="button button-primary" href="contact.html">Start Your Request</a>
+              <a class="button button-primary" href="/contact">Start Your Request</a>
             </div>
-            <a class="text-link solutions-closing-link" href="mailto:hustonsolutions.inc@gmail.com">Or email
-              directly</a>
+            <a class="text-link solutions-closing-link" href="/contact">See contact options</a>
           </div>
         </article>
       </section>
 
       <footer class="site-footer">
         <div class="footer-inner">
-          <a class="footer-brand" href="index.html" aria-label="Bryce Huston home">
+          <a class="footer-brand" href="/" aria-label="Bryce Huston home">
             <span class="brand-lockup footer-lockup">
               <strong>Bryce</strong>
               <span>Huston</span>
             </span>
           </a>
           <nav class="footer-nav" aria-label="Footer">
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="solutions.html">SOLUTIONS</a>
-            <a href="explore.html">Explore</a>
-            <a href="contact.html">Contact</a>
+            <a href="/about">About</a>
+            <a href="/projects">Projects</a>
+            <a href="/solutions">SOLUTIONS</a>
+            <a href="/explore">Explore</a>
+            <a href="/contact">Contact</a>
           </nav>
           <p class="footer-note">&copy; HUSTON SOLUTIONS</p>
         </div>
